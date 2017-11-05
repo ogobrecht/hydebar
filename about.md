@@ -6,6 +6,6 @@ topic: 5
 
 ## Me
 
-![Avatar]({{ site.baseurl }}/assets/avatar.jpeg){:.left.avatar}
+![Avatar]({{ site.baseurl }}{{ site.author.avatar }}){:.left.avatar}
 
 Your content comes here...

@@ -19,7 +19,7 @@ author:
   name: Your Name
   url: https://your-homepage.com
   email: your@email.com
-  avatar: /assets/avatar.jpeg # the link to a avatar image of the author, used in post meta
+  avatar: /assets/avatar.jpg # the link to a avatar image of the author, used in post meta
   about: /about  # the link to a page about the author or site, used in post meta
   github: yourGitHubAccountName
   twitter: yourTwitterAccountName
