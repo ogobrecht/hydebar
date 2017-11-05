@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<!--content-begin-->
+
+{%- assign tag = page.path | remove_first: "tags/" | remove_first: ".md" -%}
+{%- assign count = site.tags[tag] | size %}
+
+<h1 class="page-heading">Posts tagged with: {{ site.data.taglabels[tag] | default: tag }}</h1>
+
+{{ content }}
+
+{%- if count == 0 -%}
+<p>No posts with this tag at this time.</p>
+{%- else -%}
+{%- include post-list-by-tag.html tag=tag -%}
+{%- endif %}
+
+<!--content-end-->

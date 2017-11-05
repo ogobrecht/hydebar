@@ -1,0 +1,293 @@
+/**
+ * Reset some basic elements
+ */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+/**
+ * Basic styling
+ */
+
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+.figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+/**
+ * Images
+ */
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: none;
+    border-radius: $base-border-radius;
+    box-shadow: $box-shadow-figures;
+    &.left {
+        float: left;
+        margin: 0.3em 1em 0.3em 0;
+    }
+    &.right {
+        float: right;
+        margin: 0.3em 0 0.3em 1em;
+    }
+    &.avatar {
+        border-radius: $base-border-radius * 2;
+        width: 33%;
+        min-width: 100px;
+        max-width: 200px;
+    }
+    &.circle {
+        border-radius: 50%;
+    }
+    &.author {
+        width: 60px;
+        margin: 0.3em 1em 0 0;
+        box-shadow: none;
+    }
+    &.w30 {
+        width: 30%;
+    }
+    &.w35 {
+        width: 35%;
+    }
+    &.w40 {
+        width: 40%;
+    }
+    &.w45 {
+        width: 45%;
+    }
+    &.w50 {
+        width: 50%;
+    }
+    &.w55 {
+        width: 55%;
+    }
+    &.w60 {
+        width: 60%;
+    }
+    &.w65 {
+        width: 65%;
+    }
+    &.w70 {
+        width: 70%;
+    }
+    &.w75 {
+        width: 75%;
+    }
+    &.w80 {
+        width: 80%;
+    }
+    &.w85 {
+        width: 85%;
+    }
+    &.w90 {
+        width: 90%;
+    }
+    &.w95 {
+        width: 95%;
+    }
+}
+
+img
+/**
+ * Figures
+ */
+
+figure,
+.figure {
+    border: none;
+    border-radius: $base-border-radius;
+    box-shadow: $box-shadow-figures;
+    &>img {
+        display: block;
+    }
+}
+
+// https://stackoverflow.com/questions/38324326/sass-multiplication-with-units
+figcaption,
+.figcaption {
+    font-size: $small-font-size;
+    color: $grey-color;
+    line-height: $small-line-height;
+    margin-bottom: ($large-line-height - $small-line-height) * $base-font-size/2 + $spacing-unit/2;
+}
+
+// Workaround because Jekyll currently not delivers figure & figcaption for images and code blocks.
+// We set a negative top margin here to get closer to the previous element.
+// Use it so in a regular paragraph (separated by a blank line):
+// {:.figcaption}
+// *Code example: JavaScript and D3.js loops*
+.figcaption {
+    margin-top: -$spacing-unit/3;
+}
+
+
+/**
+ * Lists
+ */
+
+ul,
+ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    >ul,
+    >ol {
+        margin-bottom: 0;
+    }
+}
+
+
+/**
+ * Headings
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $base-font-weight;
+}
+
+
+/**
+ * Links
+ */
+
+a {
+    color: $brand-color;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/**
+ * Blockquotes
+ */
+
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    letter-spacing: -1px;
+    font-style: italic;
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/**
+ * Code formatting
+ */
+
+pre,
+code {
+    font-size: $small-font-size;
+    background-color: $grey-color-light;
+    border-radius: $base-border-radius;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+    box-shadow: $box-shadow-figures;
+    >code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+// mark text as keyboard key: `SHIFT`{:.keyboard} + `CTRL`{:.keyboard}
+.keyboard {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    display: inline-block;
+    font-family: consolas, "Liberation Mono", courier, monospace;
+    font-size: $small-font-size;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
+
+
+/**
+ * Misc
+ */
+
+hr {
+    display: block;
+    margin: $spacing-unit/2 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px solid $grey-color-light;
+}
+
+p {
+    line-height: $large-line-height;
+}

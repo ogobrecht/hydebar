@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>{{ page.title | escape }}</title>
+  <meta name="description" content="{{ page.subtitle | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <link rel="author" href="{{ site.author.url | default: site.author.name }}">
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/{{ page.theme | default: site.slides.theme | default: 'solarized' }}.css">
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+  <base target="_blank">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown="slides.md"
+               data-separator="{{ page.data-separator | default: site.slides.data-separator | default: '^\r?\n-----\r?\n$' }}"
+               data-separator-vertical="{{ page.data-separator-vertical | default: site.slides.data-separator-vertical | default: '^\r?\n---\r?\n$' }}"
+               data-separator-notes="{{ page.data-separator-notes | default: site.slides.data-separator-notes | default: '^Note:' }}"
+               data-charset="utf-8">
+      </section>
+    </div>
+  </div>
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+  <script>
+  Reveal.initialize({
+    controls: true,
+    fragments: true,
+    history: true,
+    dependencies: [
+      { src: '../reveal.js/plugin/markdown/marked.js' },
+      { src: '../reveal.js/plugin/markdown/markdown.js' },
+      { src: '../reveal.js/plugin/notes/notes.js', async: true },
+      { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+  });
+  </script>
+
+<!--content-begin-->
+{{ content }}
+<!--content-end-->
+
+</body>
+</html>

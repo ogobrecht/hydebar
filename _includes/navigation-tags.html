@@ -1,0 +1,14 @@
+{% capture tags %}
+{% for tag in site.tags %}
+  {{ tag[0] }}#{{ tag[1].size }}
+{% endfor %}
+{% endcapture %}
+{%- assign sortedtags = tags | split:' ' | sort -%}
+{%- for sortedtag in sortedtags -%}
+  {%- assign tagitems = sortedtag | split: '#' -%}
+  {%- assign tag = tagitems[0] -%}
+  {%- assign count = tagitems[1] -%}
+  {%- assign label = site.data.taglabels[tag] | default: tag -%}
+  {%- assign href = site.baseurl | append: '/tags/' | append: tag %}
+        <li><a{% if href == page.url %} class="active"{% endif %} href="{{ href }}">{{ label }} ({{ count }})</a></li>
+{%- endfor -%}

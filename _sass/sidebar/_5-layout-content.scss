@@ -1,0 +1,134 @@
+/**
+ * Page content
+ */
+
+.page-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    display: none;
+}
+
+.page-content {
+    float: right;
+    width: calc(100% - 250px);
+    padding: $spacing-unit;
+    .wrapper {
+        display: block;
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: 0;
+        @extend %clearfix;
+    }
+    table {
+        width: 100%;
+        overflow: auto;
+        display: block;
+        margin: $spacing-unit/2 0;
+        border-collapse: collapse;
+        thead {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        th {
+            border: 1px solid #ddd;
+            padding: 6px 13px;
+            font-weight: bold;
+            text-align: center;
+        }
+        tbody {
+            vertical-align: middle;
+            border-color: inherit;
+        }
+        tr {
+            border-top: 1px solid #ccc;
+            background-color: #fff;
+            vertical-align: inherit;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 6px 13px;
+        }
+        /* Don't use a margin on code samples within tables */
+        pre {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+    line-height: $small-line-height;
+    h2 {
+        margin-bottom: 0;
+    }
+    >li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-list-archive {
+    margin-left: 0;
+    list-style: none;
+    line-height: $small-line-height;
+    >li {
+        margin-bottom: $spacing-unit/2;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+
+/**
+ * Posts
+ */
+
+.post-header {
+    margin-bottom: $spacing-unit;
+    @extend %clearfix;
+}
+
+.post-title {
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.post-subtitle {
+    line-height: $small-line-height;
+    font-style: italic;
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+}
+
+
+/**
+ * Clearfix
+ */
+
+%clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

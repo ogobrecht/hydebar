@@ -1,0 +1,80 @@
+# Welcome to Jekyll! (...and the sidebar template, of course)
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.author.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Jekyll Sidebar
+description: A boilerplate template
+author:
+  name: Your Name
+  url: https://your-homepage.com
+  email: your@email.com
+  avatar: /assets/avatar.jpeg # the link to a avatar image of the author, used in post meta
+  about: /about  # the link to a page about the author or site, used in post meta
+  github: yourGitHubAccountName
+  twitter: yourTwitterAccountName
+  xing: yourXingAccountName
+url: "https://ogobrecht.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/jekyll-sidebar-template" # the subpath of your site, e.g. /blog
+permalink: /posts/:year-:month-:day-:title
+lang: en # the base language of your site, can be overwritten on a page or post
+show_lang_in_post_listings: true # home page, archive, tag post lists (useful, when you deliver mixed content)
+date_format: "%B %-d, %Y" # german example: "%d. %b %Y"
+feed_limit: 25
+disqus:
+  shortname:
+google_analytics:
+
+# Brand color: GitHub blue #2b7bb9, Reveal.js theme solarized blue #268bd2
+# If you need more control over the layout please see /assets/main.scss
+brand-color: "#268bd2"
+
+# Slide settings for Reveal.js (can be overwritten on page level)
+slides:
+  theme: solarized # Can be: beige, black, blood, league, moon, night, serif, simple, sky, solarized, white
+  data-separator: "^\\r?\\n-----\\r?\\n$" # see also https://github.com/hakimel/reveal.js/#external-markdown
+  data-separator-vertical: "^\\r?\\n---\\r?\\n$" # the double backslash is needed for the converter - see also the rendered _site - there we (should) have the correct regex with single backslashes
+  data-separator-notes: "^Notes:"
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "tags"
+    values:
+      layout: "tag"
+  -
+    scope:
+      path: "slides"
+    values:
+      layout: "slides-raw"
+
+# Build settings
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - README.md

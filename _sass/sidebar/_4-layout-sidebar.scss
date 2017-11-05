@@ -1,0 +1,79 @@
+/**
+ * Sidebar
+ */
+
+.sidebar {
+    float: left;
+    display: block;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    padding: $spacing-unit; // $spacing-unit ($spacing-unit + $logo-height) $spacing-unit;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: $brand-color;
+    line-height: 1.4em;
+    color: #fff;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+
+/**
+ * Site header
+ */
+
+.site-header {
+    margin-bottom: $spacing-unit;
+    h1 {
+        font-size: 26px;
+        line-height: $small-line-height;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: $extra-small-font-size;
+        line-height: $small-line-height;
+        margin-bottom: 0;
+    }
+}
+
+
+/**
+ * Site navigation
+ */
+
+.site-nav {
+    h3 {
+        margin-top: 0;
+        margin-bottom: $spacing-unit / 4;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    ul {
+        margin-left: $spacing-unit / 2;
+        margin-bottom: $spacing-unit;
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        font-size: $small-font-size;
+        margin-top: $spacing-unit/3;
+        display: inline-block;
+        opacity: 0.75;
+        &:hover {
+            text-decoration: none;
+            opacity: 1;
+        }
+        &.active {
+            font-weight: bold;
+            opacity: 1;
+        }
+        &.meta {
+            font-size: $extra-small-font-size;
+            line-height: $small-line-height;
+        }
+    }
+}

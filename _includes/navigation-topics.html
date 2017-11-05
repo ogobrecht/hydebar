@@ -1,0 +1,6 @@
+{%- assign pages = site.pages | sort: "topic" -%}
+{%- for item in pages -%}
+  {%- if item.topic and item.title %}
+        <li><a{% if item.url contains page.url and page.url != '/' %} class="active"{% endif %} href="{{ item.url | relative_url }}">{{ item.topic-title | default: item.title | escape }}</a></li>
+  {%- endif %}
+{%- endfor -%}
