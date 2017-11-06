@@ -48,10 +48,7 @@
       </ul>
       <h3>Contact</h3>
       <ul>
-        <li><a href="mailto:{{ site.author.email }}">Email</a></li>
-        {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>{% endif %}
-        {% if site.author.twitter %}<li><a href="https://twitter.com/{{ site.author.twitter }}">Twitter</a></li>{% endif %}
-        {% if site.author.xing %}<li><a href="https://xing.com/profile/{{ site.author.xing }}">XING</a></li>{% endif %}
+        {%- include navigation-contact.html %}
       </ul>
       <h3>Legal Things</h3>
       <ul>

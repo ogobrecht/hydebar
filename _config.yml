@@ -10,21 +10,13 @@
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.author.email }}, and so on.
+# you will see them accessed via {{ site.title }}, {{ site.data.authors[site.author].avatar }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Jekyll Sidebar
-description: A boilerplate template
-author:
-  name: Your Name
-  url: https://your-homepage.com
-  email: your@email.com
-  avatar: /assets/avatar.jpg # the link to a avatar image of the author, used in post meta
-  about: /about  # the link to a page about the author or site, used in post meta
-  github: yourGitHubAccountName
-  twitter: yourTwitterAccountName
-  xing: yourXingAccountName
-url: "https://ogobrecht.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+title: Jekyll Sidebar Template
+description: GitHub Pages compatible, Reveal.js integration
+author: yourAuthorShortName # for details see also the file "_data/authors.yml"
+url: "https://ogobrecht.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/jekyll-sidebar-template" # the subpath of your site, e.g. /blog
 permalink: /posts/:year-:month-:day-:title
 lang: en # the base language of your site, can be overwritten on a page or post

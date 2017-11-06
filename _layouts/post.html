@@ -5,7 +5,8 @@ layout: default
         <header class="post-header">
           <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
           {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
-          <p class="post-meta">{% if site.author.avatar %}<img class="left author circle" src="{{ site.baseurl }}{{ site.author.avatar }}"/>{% endif %}By {% if site.author.about %}<a href="{{ site.baseurl }}{{ site.author.about }}">{{ site.author.name }}</a><br>{% else %}{{ site.author.name }}<br>{% endif %}Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include translated-date.html date=page.date %}</time> in {% for tag in page.tags %}{% unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}<a href="{{ site.baseurl }}/tags/{{ tag }}">{{ site.data.taglabels[tag] | default: tag }}</a>{% endfor %}</p>
+          {%- assign author = page.author | default: site.author -%}
+          <p class="post-meta">{% if site.data.authors[author].avatar %}<img class="left author circle" src="{{ site.data.authors[author].avatar }}"/>{% endif %}By {% if site.data.authors[author].url %}<a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a><br>{% else %}{{ site.data.authors[author].name }}<br>{% endif %}Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include translated-date.html date=page.date %}</time> in {% for tag in page.tags %}{% unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}<a href="{{ site.baseurl }}/tags/{{ tag }}">{{ site.data.taglabels[tag] | default: tag }}</a>{% endfor %}</p>
         </header>
         <div class="post-content" itemprop="articleBody">
 
@@ -14,7 +15,7 @@ layout: default
 <!--content-end-->
 
         </div>
-        <footer class="post-meta">{% if page.last_modified_at %}Last modified {% include translated-date.html date=page.last_modified_at %} / {% endif %}You can comment via <a href="mailto:{{ site.author.email }}?subject=Comment%20on%20{{ page.url | absolute_url }}">email</a> or postcard (more <a href="/about#comments">about this</a>...)
+        <footer class="post-meta">{% if page.last_modified_at %}Last modified on {% include translated-date.html date=page.last_modified_at %}{% endif %}
         </footer>
       {%- if site.disqus.shortname %}{% include disqus-comments.html %}{% endif %}
       </article>
