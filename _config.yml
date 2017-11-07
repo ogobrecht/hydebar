@@ -19,7 +19,7 @@ author: yourAuthorShortName # for details see also the file "_data/authors.yml"
 url: "https://ogobrecht.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/jekyll-sidebar-template" # the subpath of your site, e.g. /blog
 permalink: /posts/:year-:month-:day-:title
-lang: en # the base language of your site, can be overwritten on a page or post
+lang: de # the base language of your site, can be overwritten on a page or post
 show_lang_in_post_listings: true # home page, archive, tag post lists (useful, when you deliver mixed content)
 date_format: "%B %-d, %Y" # german example: "%d. %b %Y"
 feed_limit: 25

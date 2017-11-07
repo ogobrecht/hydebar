@@ -6,12 +6,12 @@ layout: default
 {%- assign tag = page.path | remove_first: "tags/" | remove_first: ".md" -%}
 {%- assign count = site.tags[tag] | size %}
 
-<h1 class="page-heading">Posts tagged with: {{ site.data.taglabels[tag] | default: tag }}</h1>
+<h1 class="page-heading">{% include translation text='posts_tagged_with' %}: {{ site.data.taglabels[tag] | default: tag }}</h1>
 
 {{ content }}
 
 {%- if count == 0 -%}
-<p>No posts with this tag at this time.</p>
+<p>{% include translation text='no_posts_with_this_tag' %}.</p>
 {%- else -%}
 {%- include post-list-by-tag.html tag=tag -%}
 {%- endif %}

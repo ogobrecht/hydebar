@@ -1,0 +1,9 @@
+{%- comment %}
+A post can have multiple authors, so we have to iterate over the authors.
+{%- endcomment %}
+
+{%- assign authors = include.author | default: site.author %}
+{%- for author in authors %}
+  {%- if forloop.length > 1 and forloop.first %}co-authored by {% endif %}
+  {%- unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}{{ site.data.authors[author].name | escape }}
+{%- endfor -%}

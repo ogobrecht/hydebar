@@ -1,9 +1,9 @@
 yourAuthorShortName:
   name: Your Name
   email: you@your_mail_provider.com
-  # local or remote URL to the author, used in post meta:
+  # local or remote URL to the authors home page, used in post meta:
   url: /jekyll-sidebar-template/about
-  # local or remote URL to a avatar image of the author, used in post meta:
+  # local or remote URL to an avatar image of the author, used in post meta:
   avatar: https://www.gravatar.com/avatar/2cfa313826aa6986c3612b1fcc1ef912?s=200&d=mm&f=y
   # all social media entries are listed in the navigation menu under "Contact" - the first entry will be always your email address, if you provided one:
   social_media:
@@ -19,9 +19,8 @@ yourAuthorShortName:
 # author: otherAuthorName
 otherAuthorShortName:
   name: Other Author
+  email: 
   url: https://other-authors-homepage.com
-  avatar: https://other-authors-avatar-link.com/image.jpg
+  avatar: https://www.gravatar.com/avatar/2cfa313826aa6986c3612b1fcc1ef912?s=200&d=mm&f=y
 otherGuestAuthorShortName:
   name: Other Guest Author
-  url: https://other-guest-author-homepage.com
-  avatar: https://other-guest-authors-avatar-link.com/image.jpg

@@ -1,5 +1,29 @@
+# User interface strings
+ui:
+  # navigation
+  topics: Themen
+  tags: Tags
+  contact: Kontakt
+  legal: Rechtliches 
+  # index.md
+  more_in_the: Mehr im
+  archive: Archiv
+  subscribe_via: Abo via
+  # tag pages
+  posts_tagged_with: Beiträge gekennzeichnet mit
+  no_posts_with_this_tag: Zur Zeit sind keine Beiträge mit diesem Tag gekennzeichnet
+  # Reveal.js integration
+  slides_open: HTML-Präsentation in einem neuen Fenster/Tab starten
+  slides_hint_browser: Es wird ein moderner Browser mit aktiviertem JavaScript benötigt. Tips zur Navigation
+  slides_next: Nächste Folie
+  slides_previous: Vorherige Folie
+  slides_overview: Übersicht aller Folien
+  slides_shortcuts: Übersicht aller Tastaturkürzel
+  slides_hint_links: Alle enthaltenen Links werden in einem neuen Fenster/Tab geöffnet
+  slides_raw_html: Rohe HTML Version mit Anmerkungen
+  slides_raw_markdown: Rohe Markdown Version
+
 # Strings for dates
-# language German
 abbreviated_weekday:
   - So
   - Mo

@@ -1,6 +1,6 @@
-{%- if site.data.authors[site.author].email -%}
+{%- if site.data.authors[site.author].email %}
         <li><a href="mailto:{{ site.data.authors[site.author].email }}">Email</a></li>
 {%- endif -%}
-{%- for item in site.data.authors[site.author].social_media -%}
+{%- for item in site.data.authors[site.author].social_media %}
         <li><a href="{{ item.url }}">{{ item.name | escape }}</a></li>
 {%- endfor -%}

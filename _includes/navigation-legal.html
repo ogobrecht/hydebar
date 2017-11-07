@@ -2,5 +2,5 @@
 {%- for item in pages -%}
   {%- if item.legal and item.title %}
         <li><a{% if item.url contains page.url and page.url != '/' %} class="active"{% endif %} href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></li>
-  {%- endif %}
+  {%- endif -%}
 {%- endfor -%}

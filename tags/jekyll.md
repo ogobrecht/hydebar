@@ -1,3 +1,4 @@
 ---
 #
 ---
+Because we can not use any external plugins for GitHub Pages we have to workaround this for tag pages. The solution is to create for each tag an empty file with empty frontmatter in the directory `/tags`. In the `_config.yml` file is a default layout configured for each file this directory: `tag`. This layout takes the tag value from the file name and renders then the list of all posts for this tag. You should use only lowercase slugyfied keywords for your tag pages and also as the tags in your posts frontmatter. The tag labels are maintained in this file: `_data/taglabels.yml` - if you forgot to configure a label for a tag here then the tag keyword is used as the default in the Navigation and also on each post in the meta section - you will see it. And you should delete this paragraph for production use ;-)

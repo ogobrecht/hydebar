@@ -1,5 +1,29 @@
+# UI strings
+ui:
+  # navigation
+  topics: Topics
+  tags: Tags
+  contact: Contact
+  legal: Legal Things
+  # index.md
+  more_in_the: More in the
+  archive: archive
+  subscribe_via: subscribe via
+  # tag pages
+  posts_tagged_with: Posts tagged with
+  no_posts_with_this_tag: No posts with this tag at this time
+  # Reveal.js integration
+  slides_open: Open HTML presentation in a new window/tab
+  slides_hint_browser: You need a modern browser with activated JavaScript. Navigation tips
+  slides_next: Next slide
+  slides_previous: Previous slide
+  slides_overview: Overview all slides
+  slides_shortcuts: Overview all keyboard shortcuts
+  slides_hint_links: All links are opened in a new window/tab
+  slides_raw_html: Raw HTML Version with notes
+  slides_raw_markdown: Raw Markdown Version
+
 # Strings for dates
-# language English
 abbreviated_weekday:
   - Sun
   - Mon

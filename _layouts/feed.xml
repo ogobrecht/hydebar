@@ -11,9 +11,9 @@ layout: null
 <title type="html">{{ site.title | smartify | xml_escape }}</title>
 <subtitle>{{ site.description | smartify | xml_escape }}</subtitle>
 <author>
-  <name>{{ site.author.name | xml_escape }}</name>
-  <email>{{ site.author.email | xml_escape }}</email>
-  <uri>{{ site.author.url | xml_escape }}</uri>
+  <name>{{ site.data.authors[site.author].name | xml_escape }}</name>
+  <email>{{ site.data.authors[site.author].email | xml_escape }}</email>
+  <uri>{{ site.data.authors[site.author].url | xml_escape }}</uri>
 </author>
 
 {%- assign posts = site.posts | where_exp: "post", "post.draft != true" %}
@@ -26,11 +26,18 @@ layout: null
 <published>{{ post.date | date_to_xmlschema }}</published>
 <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
 <id>{{ post.id | absolute_url | xml_escape }}</id>
+{%- assign authors = post.author | default: site.author %}
+{%- for author in authors %}
 <author>
-  <name>{{ site.author.name | xml_escape }}</name>
-  <email>{{ site.author.email | xml_escape }}</email>
-  <uri>{{ site.author.url | xml_escape }}</uri>
+  <name>{{ site.data.authors[author].name | xml_escape }}</name>
+  {%- if site.data.authors[author].email %}
+  <email>{{ site.data.authors[author].email | xml_escape }}</email>
+  {%- endif %}
+  {%- if site.data.authors[author].url %}
+  <uri>{{ site.data.authors[author].url | xml_escape }}</uri>
+  {%- endif %}
 </author>
+{%- endfor -%}
 {%- if post.category %}
 <category term="{{ post.category | xml_escape }}" />
 {%- endif %}
