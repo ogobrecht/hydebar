@@ -1,6 +1,5 @@
 ---
 title: Privacy Statement
-lang: en
 legal: 2
 ---
 Your privacy statement comes here.

@@ -1,6 +1,5 @@
 ---
 title: About
-lang: en
 topic: 5
 ---
 

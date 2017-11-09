@@ -1,26 +1,26 @@
-yourAuthorShortName:
-  name: Your Name
-  email: you@your_mail_provider.com
+ogobrecht:
+  name: Ottmar Gobrecht
+  email: ottmar.gobrecht@gmail.com
   # local or remote URL to the authors home page, used in post meta:
-  url: /jekyll-sidebar-template/about
+  url: https://ogobrecht.github.io
   # local or remote URL to an avatar image of the author, used in post meta:
-  avatar: https://www.gravatar.com/avatar/2cfa313826aa6986c3612b1fcc1ef912?s=200&d=mm&f=y
+  avatar: https://www.gravatar.com/avatar/2cfa313826aa6986c3612b1fcc1ef912?s=200
   # all social media entries are listed in the navigation menu under "Contact" - the first entry will be always your email address, if you provided one:
   social_media:
     - name: GitHub
-      url: https://github.com/yourGitHubAccountName
+      url: https://github.com/ogobrecht
     - name: Twitter
-      url: https://twitter.com/yourTwitterAccountName
+      url: https://twitter.com/ogobrecht
     - name: XING
-      url: https://xing.com/profile/yourXingAccountName
+      url: https://xing.com/profile/Ottmar_Gobrecht
 
 # You can list as many authors as you like. The minimum needed information is the author name
 # On each post you can overwrite the site author in the front matter like so:
 # author: otherAuthorName
-otherAuthorShortName:
-  name: Other Author
-  email: 
+madtsch:
+  name: Markus Dötsch
+  email:
   url: https://other-authors-homepage.com
   avatar: https://www.gravatar.com/avatar/2cfa313826aa6986c3612b1fcc1ef912?s=200&d=mm&f=y
-otherGuestAuthorShortName:
-  name: Other Guest Author
+otherAuthorShortName:
+  name: Other Author

@@ -1,14 +1,14 @@
-<p><a href="{{ site.baseurl }}/slides/{{ include.dir_name }}/" target="_blank">{% include translation lang=include.lang text='slides_open' %}</a></p>
+<p><a href="{{ site.baseurl }}{{ include.path }}/" target="_blank">{% include translation text='slides_open' lang=page.lang %}</a></p>
 
 <div class="post-meta">
-  <p>{% include translation lang=include.lang text='slides_hint_browser' %}:</p>
+  <p>{% include translation text='slides_hint_browser' lang=page.lang %}:</p>
   <ul>
-    <li><code>Space</code> = {% include translation lang=include.lang text='slides_next' %}</li>
-    <li><code>Shift</code> + <code>Space</code> = {% include translation lang=include.lang text='slides_previous' %}</li>
-    <li><code>Esc</code> = {% include translation lang=include.lang text='slides_overview' %}</li>
-    <li><code>?</code> = {% include translation lang=include.lang text='slides_shortcuts' %}</li>
-    <li>{% include translation lang=include.lang text='slides_hint_links' %}</li>
-    <li><a href="{{ site.baseurl }}/slides/{{ include.dir_name }}/slides.html">{% include translation lang=include.lang text='slides_raw_html' %}</a></li>
-    <li><a href="{{ site.baseurl }}/slides/{{ include.dir_name }}/slides.md">{% include translation lang=include.lang text='slides_raw_markdown' %}</a></li>
+    <li><code>Space</code> = {% include translation text='slides_next' lang=page.lang %}</li>
+    <li><code>Shift</code> + <code>Space</code> = {% include translation text='slides_previous' lang=page.lang %}</li>
+    <li><code>Esc</code> = {% include translation text='slides_overview' lang=page.lang %}</li>
+    <li><code>?</code> = {% include translation text='slides_shortcuts' lang=page.lang %}</li>
+    <li>{% include translation text='slides_hint_links' lang=page.lang %}</li>
+    <li><a href="{{ site.baseurl }}{{ include.path }}/slides.html">{% include translation text='slides_raw_html' lang=page.lang %}</a></li>
+    <li><a href="{{ site.baseurl }}{{ include.path }}/slides.md">{% include translation text='slides_raw_markdown' lang=page.lang %}</a></li>
   </ul>
 </div>

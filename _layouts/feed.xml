@@ -13,7 +13,7 @@ layout: null
 <author>
   <name>{{ site.data.authors[site.author].name | xml_escape }}</name>
   <email>{{ site.data.authors[site.author].email | xml_escape }}</email>
-  <uri>{{ site.data.authors[site.author].url | xml_escape }}</uri>
+  <uri>{{ site.data.authors[site.author].url | absolute_url | xml_escape }}</uri>
 </author>
 
 {%- assign posts = site.posts | where_exp: "post", "post.draft != true" %}
@@ -34,7 +34,7 @@ layout: null
   <email>{{ site.data.authors[author].email | xml_escape }}</email>
   {%- endif %}
   {%- if site.data.authors[author].url %}
-  <uri>{{ site.data.authors[author].url | xml_escape }}</uri>
+  <uri>{{ site.data.authors[author].url | absolute_url | xml_escape }}</uri>
   {%- endif %}
 </author>
 {%- endfor -%}

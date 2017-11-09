@@ -1,0 +1,31 @@
+{%- comment -%}
+Found here: https://stackoverflow.com/questions/10714980/locale-specific-date-in-jekyll
+
+Copyright (c) 2016 Oncleben31
+License: MIT (https://github.com/oncleben31/jekyll-date-basic-i18n/blob/master/LICENSE)
+
+This is a modified version: we use here always the date format specified in the file _data/locales[site.lang] so that the user needs only to configure the site language in the file _config.yml.
+{%- endcomment -%}
+
+{%- assign lang = site.lang | default: 'en' -%}
+{%- assign date_format = site.data.locales[lang].ui.date_format | default: site.data.locales.en.ui.date_format -%}
+{%- assign num_day = include.date | date: "%w" | plus: 0 -%}
+{%- assign num_month = include.date | date: "%-m" | plus: -1 -%}
+
+{%- if site.data.locales[lang].abbreviated_weekday[num_day] -%}
+  {%- assign date_format = date_format | replace: "%a",  site.data.locales[lang].abbreviated_weekday[num_day] -%}
+{%- endif -%}
+
+{%- if site.data.locales[lang].full_weekday[num_day] -%}
+  {%- assign date_format = date_format | replace: "%A",  site.data.locales[lang].full_weekday[num_day] -%}
+{%- endif -%}
+
+{%- if site.data.locales[lang].abbreviated_month[num_month] -%}
+  {%- assign date_format = date_format | replace: "%b",  site.data.locales[lang].abbreviated_month[num_month] -%}
+{%- endif -%}
+
+{%- if site.data.locales[lang].full_month[num_month] -%}
+  {%- assign date_format = date_format | replace: "%B",  site.data.locales[lang].full_month[num_month] -%}
+{%- endif -%}
+
+{{- include.date | date: date_format -}}

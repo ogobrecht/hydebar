@@ -2,13 +2,13 @@
 title: Dr. Jekyll and Mr. Markdown - Bloggen für Entwickler
 subtitle: DOAG Konferenz 2017, Nürnberg
 tags: [slides, jekyll, markdown]
-author: [yourAuthorShortName, otherAuthorShortName]
+author: [ogobrecht, madtsch]
 lang: de
 last_modified_at: 2017-11-06
 ---
 Die Folien zu unserem Vortrag:
 
-{% include slides.html dir_name="2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler" lang=page.lang %}
+{% include slides.html path="/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler" %}
 
 Kurzdarstellung:
 

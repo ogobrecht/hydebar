@@ -1,2 +1,2 @@
-{%- assign lang = include.lang | default: site.lang -%}
-{{- site.data.locales[lang].ui[include.text] | default: site.data.locales['en'].ui[include.text] -}}
+{%- assign lang=include.lang | default: site.lang -%}
+{{- site.data.locales[lang].ui[include.text] | default: site.data.locales.en.ui[include.text] -}}

@@ -15,13 +15,12 @@
 # in the templates via {{ site.myvariable }}.
 title: Jekyll Sidebar Template
 description: GitHub Pages compatible, Reveal.js integration
-author: yourAuthorShortName # for details see also the file "_data/authors.yml"
+author: ogobrecht # edit also the author details in "_data/authors.yml" (multiple authors possible)
 url: "https://ogobrecht.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/jekyll-sidebar-template" # the subpath of your site, e.g. /blog
 permalink: /posts/:year-:month-:day-:title
-lang: en # the base language of your site, can be overwritten on a page or post
+lang: en # the base language of your site, can be overwritten on a page or post - for UI translations see also the files under "_data/locales/" - if you finished an additional language file please create a pull request to make it availabe for all users :-)
 show_lang_in_post_listings: true # home page, archive, tag post lists (useful, when you deliver mixed content)
-date_format: "%B %-d, %Y" # german example: "%d. %b %Y"
 feed_limit: 25
 disqus:
   shortname:
@@ -36,7 +35,7 @@ slides:
   theme: solarized # Can be: beige, black, blood, league, moon, night, serif, simple, sky, solarized, white
   data-separator: "^\\r?\\n-----\\r?\\n$" # see also https://github.com/hakimel/reveal.js/#external-markdown
   data-separator-vertical: "^\\r?\\n---\\r?\\n$" # the double backslash is needed for the converter - see also the rendered _site - there we (should) have the correct regex with single backslashes
-  data-separator-notes: "^Notes:"
+  data-separator-notes: "^Notes:" # notes are hidden on the slides but shown on the speaker notes - try to press "s" on a running slideshow to see the speaker notes in a new tab/window
 
 # Defaults
 defaults:
@@ -57,11 +56,6 @@ defaults:
       path: "tags"
     values:
       layout: "tag"
-  -
-    scope:
-      path: "slides"
-    values:
-      layout: "slides-raw"
 
 # Build settings
 markdown: kramdown

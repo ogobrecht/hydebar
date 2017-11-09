@@ -1,6 +1,5 @@
 ---
 title: Imprint
-lang: en
 legal: 1
 ---
 Your legal information comes here.

@@ -1,6 +1,5 @@
 ---
 title: Jekyll
-lang: en
 topic: 1
 ---
 This is a page, because it is not located in the `_posts` directory. We use it here to list one of our main topics "Jekyll". To get a list of all posts with a specific tag we are calling here an include file with this notation:

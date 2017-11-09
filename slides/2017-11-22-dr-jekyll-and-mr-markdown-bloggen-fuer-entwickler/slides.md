@@ -7,15 +7,79 @@ DOAG Konferenz 2017, Nürnberg
 
 -----
 
-## Erster Blickkontakt
+## Motivation
+
+---
+
+### Teilt Euer Wissen!
 
 -----
 
 ## Was ist Jekyll?
 
+---
+
+### Ein Generator für statische Webseiten
+
+---
+
+### Was soll das bringen?
+
+---
+
+- Geschwindigkeit
+- Sicherheit
+
+---
+
+...
+
 -----
 
-## Installation
+## Was ist Markdown?
+
+---
+
+### Eine vereinfachte Auszeichnungssprache
+
+(vornehmlich zur HTML Erstellung)
+
+---
+
+...
+
+---
+
+## Online in 3 Minuten
+
+Alles im Browser
+
+---
+
+- Login to GitHub
+- Go to https://github.com/ogobrecht/jekyll-sidebar-template
+- Fork Repository
+- Edit `_config.yml` (url, baseurl)
+- Repository Settings
+    - Rename to yourUserName.github.io
+    - Activate GitHub Pages
+
+---
+
+### Vervollständigung Konfiguration
+
+- `_data/authors`
+- `_config.yml`
+
+---
+
+...
+
+-----
+
+## Optionale Installation lokal
+
+Für Neugierige und Bastler
 
 ---
 
@@ -23,41 +87,62 @@ DOAG Konferenz 2017, Nürnberg
 
 - Git Client
 - Ruby
-- `gem install bundler`
-- `bundle install jekyll`
+
+Paketmanager und Jekyll:
+```sh
+gem install bundler
+bundle install jekyll
+```
 
 ---
 
 ### Installation Blog
 
-- In das Projektverzeichnis wechseln
-- git checkout url
-- `bundle install`
-
----
-
-### Konfiguration Blog
-
-- Kopieren `_config.yml.dist` zu  `_config.yml`
-- Bearbeiten `_config.yml`
-- Bearbeiten Posts in `_posts`
+Im Projektverzeichnis:
+```sh
+git checkout yourForkedRepoURL.git
+bundle install
+```
 
 ---
 
 ### Starten Devserver
 
-- `bundle exec kekyll serve`
-- `bundle exec jekyll build`
+Refresh bei Änderungen
+```sh
+bundle exec kekyll serve
+```
+Einmalig
+```sh
+bundle exec jekyll build
+```
+Linkprüfung
+```sh
+bundle exec htmlproofer ./_site \
+  --assume-extension \
+  --file-ignore /.*\/assets\/reveal\.js\/.*/
+```
+
+Anmerkung:
+
+Wenn die site.basurl nicht leer sein sollte, dann wird "htmlproofer" vermutlich sehr viele Fehler werfen, weil keine internen Links auf dem Development Server stimmen. Das kann man umgehen, in dem man die Seite in dem entsprechenden Unterverzeichnis erstellen lässt - hier "jekyll-sidebar-template":
+
+```ruby
+bundle exec jekyll build -d _site/jekyll-sidebar-template
+bundle exec htmlproofer ./_site \
+  --assume-extension \
+  --file-ignore /.*\/assets\/reveal\.js\/.*/
+```
 
 ---
 
 ### Spätere Updates
-- `bundle install`
-- `bundle update github-pages`
-- `bundle update html-proofer`
-- `bundle exec jekyll serve`
-- `bundle exec jekyll build`
-- `bundle exec htmlproofer ./_site --assume-extension --file-ignore /\/assets.*/,/\/slides.*/`
+
+```sh
+bundle install
+bundle update github-pages
+bundle update html-proofer
+```
 
 -----
 
@@ -80,12 +165,6 @@ Convention over configuration
 ---
 
 ### Implizite Metadaten
-
----
-
-## Markdown
-
-Das Schreibformat der Wahl
 
 ---
 

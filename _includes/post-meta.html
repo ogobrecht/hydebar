@@ -1,19 +1,19 @@
 {%- comment %}An post can have multiple authors, so we have to iterate over the authors{% endcomment %}
 
-{%- assign authors = include.author | default: site.author %}
+{%- assign authors = page.author | default: site.author %}
 {%- for author in authors %}
-  {%- if site.data.authors[author].avatar %}<img class="left author circle" src="{{ site.data.authors[author].avatar }}" title="{{ site.data.authors[author].name }}" />{% endif %}
+  {%- if site.data.authors[author].avatar %}<img class="left author circle" src="{{ site.data.authors[author].avatar }}" title="{{ site.data.authors[author].name }}" alt="{{ site.data.authors[author].name }}" />{% endif %}
 {%- endfor -%}
 
-By
+{% include translation text='by' %}
 
 {%- for author in authors %}
-  {%- unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}
+  {%- unless forloop.first %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}
   {%- if site.data.authors[author].url %} <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>{% else %}{{ site.data.authors[author].name }}{% endif %}
 {%- endfor -%}
 
-<br>Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include translated-date.txt date=page.date %}</time> in
+<br>{% include translation text='posted' %} <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include translated-date date=page.date %}</time> {% include translation text='in' %}
 
 {%- for tag in page.tags %}
-  {%- unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %} <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ site.data.taglabels[tag] | default: tag }}</a>
+  {%- unless forloop.first %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %} <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ site.data.taglabels[tag] | default: tag }}</a>
 {%- endfor -%}

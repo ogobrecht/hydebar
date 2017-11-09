@@ -1,17 +1,29 @@
-# User interface strings
+# User interface strings - used by _/includes/translation
 ui:
+  # date format - see also https://hackhands.com/format-datetime-ruby/ or https://www.foragoodstrftime.com/
+  date_format: "%d. %B %Y"
   # navigation
   topics: Themen
   tags: Tags
   contact: Kontakt
-  legal: Rechtliches 
+  legal: Rechtliches
+  generated: Generiert von Jekyll und dem Sidebar Template
   # index.md
   more_in_the: Mehr im
   archive: Archiv
   subscribe_via: Abo via
+  # post meta
+  by: Von
+  and: und
+  posted: Veröffentlicht am
+  in: in
+  # post footer
+  last_modified: Zuletzt geändert am
   # tag pages
   posts_tagged_with: Beiträge gekennzeichnet mit
   no_posts_with_this_tag: Zur Zeit sind keine Beiträge mit diesem Tag gekennzeichnet
+  # 404 error page
+  page_not_found: Die Seite, nach der Du schaust, existiert nicht. Normalerweise zeigt Dir der Webserver hier nur eine Statuscode-404-Fehlerseite. Für Deine Bequemlichkeit zeigen wir Dir hier einfach alle verfügbaren Beiträge
   # Reveal.js integration
   slides_open: HTML-Präsentation in einem neuen Fenster/Tab starten
   slides_hint_browser: Es wird ein moderner Browser mit aktiviertem JavaScript benötigt. Tips zur Navigation
@@ -23,7 +35,7 @@ ui:
   slides_raw_html: Rohe HTML Version mit Anmerkungen
   slides_raw_markdown: Rohe Markdown Version
 
-# Strings for dates
+# Strings for dates - used by _/includes/translated-date.txt
 abbreviated_weekday:
   - So
   - Mo
