@@ -258,7 +258,7 @@ Die Templatesprache
 
 -----
 
-## Weiter Site Generatoren
+## Weiter Site Generatoren (og)
 
 - Hexo
 - Gatsby
