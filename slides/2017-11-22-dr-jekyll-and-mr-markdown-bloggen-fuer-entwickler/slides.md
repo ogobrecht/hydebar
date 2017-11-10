@@ -7,15 +7,15 @@ DOAG Konferenz 2017, Nürnberg
 
 -----
 
-## Motivation
+## Motivation (md)
 
 ---
 
-### Teilt Euer Wissen!
+## Teilt Euer Wissen!
 
 -----
 
-## Was ist Jekyll?
+## Was ist Jekyll? (og)
 
 ---
 
@@ -36,7 +36,7 @@ DOAG Konferenz 2017, Nürnberg
 
 -----
 
-## Was ist Markdown?
+## Was ist Markdown? (og)
 
 ---
 
@@ -48,9 +48,9 @@ DOAG Konferenz 2017, Nürnberg
 
 ...
 
----
+-----
 
-## Online in 3 Minuten
+## Online in 3 Minuten (og)
 
 Alles im Browser
 
@@ -70,6 +70,7 @@ Alles im Browser
 
 - `_data/authors`
 - `_config.yml`
+  - permalink: /posts/:year-:month-:day-:title (einstellen und nicht mehre ändern)
 
 ---
 
@@ -77,7 +78,7 @@ Alles im Browser
 
 -----
 
-## Optionale Installation lokal
+## Optionale Installation lokal (md)
 
 Für Neugierige und Bastler
 
@@ -146,25 +147,41 @@ bundle update html-proofer
 
 -----
 
-## Die Jekyll Blackbox
-
-Convention over configuration
+## Inhalte Erstellen (md)
 
 ---
 
-### Wenig Konfiguration
+### Online
+
+- GitHub
+- Trello
 
 ---
 
-### Viel Konvention
+### Demo...
 
 ---
 
-### Verzeichnisstruktur
+### Offline Toolempfehlungen
+
+- Editor Atom
+  - Plugin: Markdown-Writer
+- Editor Visual Studi Code
+  - Plugin: Markdown All in One
+- ...
 
 ---
 
-### Implizite Metadaten
+Demo...### 
+
+---
+
+### Spezialitäten im Jekyll Umfeld
+
+- Reveal.js
+- Bild: `![Python Pandas](./assets/pandas.pydata.org.png) <!-- .element: width="600px" -->`
+- Beispiel Bildergalerien (Touch-Ünterstützung)
+- TOC `{{ include toc }}`
 
 ---
 
@@ -179,13 +196,55 @@ Convention over configuration
 
 ---
 
-## Frontmatter
+Demo...
+
+---
+
+...
+
+-----
+
+## Die Jekyll Blackbox (md)
+
+---
+
+### Was ist ein Post?
+
+---
+
+- liegt im Ordner `_posts`
+- Namenskonvention (ISO Datum)
+- 
+
+---
+
+### Was ist eine Page?
+
+---
+
+### Frontmatter
 
 Die Metadaten
 
 ---
 
-## Liquid
+### Verzeichnisstruktur
+
+---
+
+### Implizite Metadaten
+
+- Verweis Doku
+- 
+
+-----
+
+## Jekyll selbst erweitern (og)
+Beispiel Reveal.js Integration
+
+---
+
+### Liquid
 
 Die Templatesprache
 
@@ -195,11 +254,16 @@ Die Templatesprache
 
 ---
 
+...
+
+-----
+
 ## Weiter Site Generatoren
 
 - Hexo
 - Gatsby
 - Hakyll
+- https://github.com/barryclark/jekyll-now#other-forkable-themes
 - ...
 
 ---
@@ -207,14 +271,7 @@ Die Templatesprache
 ## Links
 
 - Jekyll Guide: http://jmcglone.com/guides/github-pages/
--
-
----
-
-## Feeds
-
-https://www.mnot.net/rss/tutorial/
-http://www.feedvalidator.org/
+- ...
 
 ---
 
