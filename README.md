@@ -1,1 +1,1 @@
-# jekyll-sidebar-template
+# HydeBar - Jekyll Sidebar Template

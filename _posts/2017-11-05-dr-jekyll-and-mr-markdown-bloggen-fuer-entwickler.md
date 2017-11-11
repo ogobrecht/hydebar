@@ -18,6 +18,6 @@ _Der Vortrag führt in die Erstellung eines Blogs mit Jekyll ein und zeigt die e
 
 _Um den Bogen zurück zu Oracle zu schlagen wird zum Abschluss eine ähnlich einfach zu nutzende Template-Engine für PL/SQL gezeigt, mit der man das Eine oder Andere besser lösen kann als mit Replace-Verkettungen._
 
-Weitere Infos zu dem im Vortrag vorgestellten Projekt [Jekyll Sidebar Template][1].
+Weitere Infos zu dem im Vortrag vorgestellten Projekt [HydeBar][1].
 
-[1]: https://github.com/ogobrecht/jekyll-sidebar-template
+[1]: https://github.com/ogobrecht/hydebar

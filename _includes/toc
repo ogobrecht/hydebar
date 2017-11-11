@@ -1,0 +1,6 @@
+{%- assign lang=include.lang | default: page.lang -%}
+## {% include translation text='toc' lang=lang %}
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Table of Contents" header
+{:toc}

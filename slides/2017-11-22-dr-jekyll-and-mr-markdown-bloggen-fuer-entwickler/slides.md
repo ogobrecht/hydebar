@@ -21,6 +21,8 @@ DOAG Konferenz 2017, Nürnberg
 
 ### Ein Generator für statische Webseiten
 
+Genauer, ein Ruby Skript
+
 ---
 
 ### Was soll das bringen?
@@ -32,7 +34,55 @@ DOAG Konferenz 2017, Nürnberg
 
 ---
 
-...
+Geschwindigkeit dynamisch - schnell (DSL)
+
+![WordPress Beispiel](./assets/ladezeit-dynamisch.png)
+
+---
+
+Geschwindigkeit statisch - schnell (DSL)
+
+![WordPress Beispiel](./assets/ladezeit-statisch.png)
+
+---
+
+Geschwindigkeit dynamisch - langsam (mobil)
+
+![WordPress Beispiel](./assets/ladezeit-dynamisch-langsam-mobil.png)
+
+---
+
+Geschwindigkeit statisch - langsam (mobil)
+
+![WordPress Beispiel](./assets/ladezeit-statisch-langsam-mobil.png)
+
+---
+
+[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?hl=de&url=ogobrecht.github.io&tab=mobile)
+
+![WordPress Beispiel](./assets/page-speed-statisch-mobil.png)
+
+---
+
+[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?hl=de&url=ogobrecht.github.io&tab=desktop)
+
+![WordPress Beispiel](./assets/page-speed-statisch-desktop.png)
+
+---
+
+[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?hl=de&url=www.thatjeffsmith.com&tab=mobile)
+
+![WordPress Beispiel](./assets/page-speed-dynamisch-mobil.png)
+
+---
+
+[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?hl=de&url=www.thatjeffsmith.com&tab=desktop)
+
+![WordPress Beispiel](./assets/page-speed-dynamisch-desktop.png)
+
+---
+
+### FIXME Screenshot DokuWiki einfügen wegen Sicherheit
 
 -----
 
@@ -42,7 +92,46 @@ DOAG Konferenz 2017, Nürnberg
 
 ### Eine vereinfachte Auszeichnungssprache
 
-(vornehmlich zur HTML Erstellung)
+Vornehmlich zur HTML Erstellung
+
+---
+
+### Ziel
+
+Ohne Konvertierung leicht les- und schreibbar
+
+```markdown
+# Eine Überschrift der ersten Ordnung
+
+## Eine Überschrift zweiter Ordnung
+
+Ein Absatz mit *kursivem Text* , **fettem Text** und
+einer ***Kombination aus fett und kursiv***.
+
+- Ein Aufzählungspunkt
+- Noch einer
+  - Ein Unterpunkt
+
+[Ein Link](https://daringfireball.net/projects/markdown/syntax)
+
+![Ein Bild](/assets/john-gruber.png)
+```
+
+---
+
+### Abgrenzung
+
+HTML = Publikations-Format
+
+Markdown = Schreib-Format
+
+---
+
+### Toolunterstützung
+
+![Editor Atom mit Live-Vorschau](./assets/editor-atom.png)
+
+[Editor Atom](https://atom.io/) mit [Plugin Markdown-Writer](https://atom.io/packages/markdown-writer)
 
 ---
 
@@ -172,7 +261,7 @@ bundle update html-proofer
 
 ---
 
-Demo...### 
+### Demo...
 
 ---
 
@@ -181,18 +270,7 @@ Demo...###
 - Reveal.js
 - Bild: `![Python Pandas](./assets/pandas.pydata.org.png) <!-- .element: width="600px" -->`
 - Beispiel Bildergalerien (Touch-Ünterstützung)
-- TOC `{{ include toc }}`
-
----
-
-### Automatisches Inhaltsverzeichnis
-```
-# Contents
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
-```
+- TOC: {% raw %}`{% include toc %}`{% endraw %}
 
 ---
 
@@ -214,7 +292,7 @@ Demo...
 
 - liegt im Ordner `_posts`
 - Namenskonvention (ISO Datum)
-- 
+-
 
 ---
 
@@ -235,7 +313,7 @@ Die Metadaten
 ### Implizite Metadaten
 
 - Verweis Doku
-- 
+-
 
 -----
 
@@ -279,7 +357,7 @@ Die Templatesprache
 
 ### Fragen?
 
-[Madtsch.github.io][98]  
+[madtsch.github.io][98]  
 [ogobrecht.github.io][99]
 
 [98]: https://Madtsch.github.io

@@ -1,4 +1,4 @@
-# Welcome to Jekyll! (...and the sidebar template, of course)
+# Welcome to Jekyll! (...and the HydeBar template, of course)
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -8,27 +8,26 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.data.authors[site.author].avatar }}, and so on.
+# you will see them accessed via {{ site.title }}, {{ site.data.authors[site.author].email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Jekyll Sidebar Template
-description: GitHub Pages compatible, Reveal.js integration
-author: ogobrecht # edit also the author details in "_data/authors.yml" (multiple authors possible)
+title: HydeBar
+description: Jekyll Sidebar Template
+author: ogobrecht # edit also the author details in "_data/authors.yml" (multiple authors possible for a post)
 url: "https://ogobrecht.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/jekyll-sidebar-template" # the subpath of your site, e.g. /blog
+baseurl: "/hydebar" # the subpath of your site, e.g. /blog
 permalink: /posts/:year-:month-:day-:title
 lang: en # the base language of your site, can be overwritten on a page or post - for UI translations see also the files under "_data/locales/" - if you finished an additional language file please create a pull request to make it availabe for all users :-)
-show_lang_in_post_listings: true # home page, archive, tag post lists (useful, when you deliver mixed content)
+brand-color: "#268bd2" # If you need more control over the layout please see /assets/main.scss
+show_lang_in_post_listings: true # home page, archive, post lists on tag pages (useful, when you deliver mixed content)
 feed_limit: 25
 disqus:
   shortname:
 google_analytics:
-
-# Brand color: GitHub blue #2b7bb9, Reveal.js theme solarized blue #268bd2
-# If you need more control over the layout please see /assets/main.scss
-brand-color: "#268bd2"
 
 # Slide settings for Reveal.js (can be overwritten on page level)
 slides:
@@ -37,7 +36,9 @@ slides:
   data-separator-vertical: "^\\r?\\n---\\r?\\n$" # the double backslash is needed for the converter - see also the rendered _site - there we (should) have the correct regex with single backslashes
   data-separator-notes: "^Notes:" # notes are hidden on the slides but shown on the speaker notes - try to press "s" on a running slideshow to see the speaker notes in a new tab/window
 
-# Defaults
+
+
+# Front Matter defaults - see also https://jekyllrb.com/docs/configuration/#front-matter-defaults
 defaults:
   -
     scope:
@@ -57,10 +58,38 @@ defaults:
     values:
       layout: "tag"
 
-# Build settings
+
+
+# Build settings - see also: https://jekyllrb.com/docs/configuration/#default-configuration
+
+# Filtering Content
+limit_posts: 0 # Limit the number of posts to parse and publish
+future: false # Publish posts or collection documents with a future date
+unpublished: false # Render posts that were marked as unpublished
+show_drafts: false # Process and render draft posts
+
+# Conversion
 markdown: kramdown
+highlighter: rouge
+excerpt_separator: "\n\n"
+profile: true # Generate a Liquid rendering profile to help you identify performance bottlenecks.
+
+# Markdown processing - see also: https://kramdown.gettalong.org/options.html
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: 1..6
+  footnote_nr: 1
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+# File exclusion
 exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
   - README.md
+  - LICENSE.txt
+  - assets/reveal.js/css/theme/README.md
+  - assets/reveal.js/plugin/markdown/example.md 
