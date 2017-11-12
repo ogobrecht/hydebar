@@ -72,7 +72,7 @@ img {
     vertical-align: middle;
     border: none;
     border-radius: $base-border-radius;
-    box-shadow: $box-shadow-figures;
+    box-shadow: $box-shadow-img-pre;
     &.left {
         float: left;
         margin: 0.3em 1em 0.3em 0;
@@ -139,7 +139,7 @@ img {
     }
 }
 
-img
+
 /**
  * Figures
  */
@@ -147,19 +147,23 @@ img
 figure,
 .figure {
     border: none;
-    border-radius: $base-border-radius;
-    box-shadow: $box-shadow-figures;
     &>img {
         display: block;
+    }
+    & pre,
+    & .highlight {
+        margin-bottom: 0 !important;
     }
 }
 
 // https://stackoverflow.com/questions/38324326/sass-multiplication-with-units
 figcaption,
-.figcaption {
+.figcaption,
+.caption {
     font-size: $small-font-size;
     color: $grey-color;
     line-height: $small-line-height;
+    margin-top: 3px;
     margin-bottom: ($large-line-height - $small-line-height) * $base-font-size/2 + $spacing-unit/2;
 }
 
@@ -168,7 +172,8 @@ figcaption,
 // Use it so in a regular paragraph (separated by a blank line):
 // {:.figcaption}
 // *Code example: JavaScript and D3.js loops*
-.figcaption {
+.figcaption,
+.caption {
     margin-top: -$spacing-unit/3;
 }
 
@@ -251,7 +256,7 @@ code {
 pre {
     padding: 8px 12px;
     overflow-x: auto;
-    box-shadow: $box-shadow-figures;
+    box-shadow: $box-shadow-img-pre;
     >code {
         border: 0;
         padding-right: 0;

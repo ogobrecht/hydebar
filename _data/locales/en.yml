@@ -1,6 +1,6 @@
 # UI strings
 ui:
-  # date format - see also https://hackhands.com/format-datetime-ruby/ or https://www.foragoodstrftime.com/
+  # date format - see also http://ruby-doc.org/core-2.4.2/Time.html#method-i-strftime
   date_format: "%B %-d, %Y"
   # Table of Contents
   toc: Table of Contents

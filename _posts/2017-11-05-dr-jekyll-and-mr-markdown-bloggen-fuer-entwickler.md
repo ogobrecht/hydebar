@@ -4,7 +4,7 @@ subtitle: DOAG Konferenz 2017, Nürnberg
 tags: [slides, jekyll, markdown]
 author: [ogobrecht, madtsch]
 lang: de
-last_modified_at: 2017-11-06
+last_modified_at: 2017-11-12
 ---
 Die Folien zu unserem Vortrag:
 

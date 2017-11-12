@@ -72,7 +72,7 @@ show_drafts: false # Process and render draft posts
 markdown: kramdown
 highlighter: rouge
 excerpt_separator: "\n\n"
-profile: true # Generate a Liquid rendering profile to help you identify performance bottlenecks.
+profile: false # Generate a Liquid rendering profile to help you identify performance bottlenecks.
 
 # Markdown processing - see also: https://kramdown.gettalong.org/options.html
 kramdown:
@@ -92,4 +92,4 @@ exclude:
   - README.md
   - LICENSE.txt
   - assets/reveal.js/css/theme/README.md
-  - assets/reveal.js/plugin/markdown/example.md 
+  - assets/reveal.js/plugin/markdown/example.md

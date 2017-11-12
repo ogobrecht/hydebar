@@ -1,6 +1,18 @@
-{%- assign lang=include.lang | default: page.lang -%}
+{% assign lang=include.lang | default: page.lang %}
+
+{% if include.header %}
+  {% if include.header != "" %}
+
+## {{ include.header }}
+{:.no_toc}
+
+  {% endif %}
+{% else %}
+
 ## {% include translation text='toc' lang=lang %}
 {:.no_toc}
+
+{% endif %}
 
 * Will be replaced with the ToC, excluding the "Table of Contents" header
 {:toc}

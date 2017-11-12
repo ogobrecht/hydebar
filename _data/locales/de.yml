@@ -1,6 +1,6 @@
 # User interface strings - used by _/includes/translation
 ui:
-  # date format - see also https://hackhands.com/format-datetime-ruby/ or https://www.foragoodstrftime.com/
+  # date format - see also http://ruby-doc.org/core-2.4.2/Time.html#method-i-strftime
   date_format: "%d. %B %Y"
   # Table of Contents
   toc: Inhaltsverzeichnis
