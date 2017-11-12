@@ -1,6 +1,6 @@
 ---
 title: Privacy Statement
-legal: 2
+sidebar-legal: 2
 ---
 Your privacy statement comes here.
 

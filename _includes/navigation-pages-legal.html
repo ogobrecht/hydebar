@@ -1,0 +1,13 @@
+{%- assign pages = site.pages | where_exp: "item", "item.sidebar-legal > 0" ) | sort: "sidebar-legal" -%}
+{%- for item in pages -%}
+  {%- if forloop.first %}
+      <h3>{% include translation text='legal' %}</h3>
+      <ul>
+  {%- endif -%}
+  {%- if item.title %}
+        <li><a{% if item.url contains page.url and page.url != '/' %} class="active"{% endif %} href="{{ item.url | relative_url }}">{{ item.sidebar-title | default: item.title | escape }}</a></li>
+  {%- endif -%}
+  {%- if forloop.last %}
+      </ul>
+  {%- endif -%}
+{%- endfor -%}

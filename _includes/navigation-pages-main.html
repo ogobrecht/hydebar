@@ -1,0 +1,12 @@
+{%- assign pages = site.pages | where_exp: "item", "item.sidebar > 0" ) | sort: "sidebar" -%}
+{%- for item in pages -%}
+  {%- if forloop.first %}
+      <ul>
+  {%- endif -%}
+  {%- if item.title %}
+        <li><a{% if item.url contains page.url and page.url != '/' %} class="active"{% endif %} href="{{ item.url | relative_url }}">{{ item.sidebar-title | default: item.title | escape }}</a></li>
+  {%- endif -%}
+  {%- if forloop.last %}
+      </ul>
+  {%- endif -%}
+{%- endfor -%}
