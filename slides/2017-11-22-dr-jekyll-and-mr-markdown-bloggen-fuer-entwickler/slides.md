@@ -38,11 +38,15 @@ Geschwindigkeit dynamisch - schnell (DSL)
 
 ![WordPress Beispiel](./assets/ladezeit-dynamisch.png)
 
+87 Requests - 1,3 MB - 2,7 s Ladezeit
+
 ---
 
 Geschwindigkeit statisch - schnell (DSL)
 
-![WordPress Beispiel](./assets/ladezeit-statisch.png)
+![Jekyll Beispiel](./assets/ladezeit-statisch.png)
+
+2 Requests - 5 KB - 0,1 s Ladezeit
 
 ---
 
@@ -50,11 +54,15 @@ Geschwindigkeit dynamisch - langsam (mobil)
 
 ![WordPress Beispiel](./assets/ladezeit-dynamisch-langsam-mobil.png)
 
+86 Requests - 1,3 MB - 36,3 s Ladezeit
+
 ---
 
 Geschwindigkeit statisch - langsam (mobil)
 
-![WordPress Beispiel](./assets/ladezeit-statisch-langsam-mobil.png)
+![Jekyll Beispiel](./assets/ladezeit-statisch-langsam-mobil.png)
+
+2 Requests - 5 KB - 4,2 s Ladezeit
 
 ---
 
@@ -145,11 +153,10 @@ Alles im Browser
 
 ---
 
-- Login to GitHub
-- Go to https://github.com/ogobrecht/jekyll-sidebar-template
-- Fork Repository
+- Login to [GitHub](https://github.com/)
+- Fork repository [HydeBar](https://github.com/ogobrecht/hydebar)
 - Edit `_config.yml` (url, baseurl)
-- Repository Settings
+- Change repository settings
     - Rename to yourUserName.github.io
     - Activate GitHub Pages
 
@@ -160,6 +167,7 @@ Alles im Browser
 - `_data/authors`
 - `_config.yml`
   - permalink: /posts/:year-:month-:day-:title (einstellen und nicht mehre ändern)
+  - ...
 
 ---
 
@@ -336,20 +344,26 @@ Die Templatesprache
 
 -----
 
-## Weiter Site Generatoren (og)
-
-- Hexo
-- Gatsby
-- Hakyll
-- https://github.com/barryclark/jekyll-now#other-forkable-themes
-- ...
+## Links (og)
 
 ---
 
-## Links
+### Weitere Jekyll Themes/Templates
 
-- Jekyll Guide: http://jmcglone.com/guides/github-pages/
+- Mit ["Fork Quick Start"](https://github.com/barryclark/jekyll-now#other-forkable-themes)
+- [Step by Step Anleitung](http://jmcglone.com/guides/github-pages/)
+
+---
+
+## Weitere Static Site Generators
+
+- [Hugo](https://gohugo.io/) (Go)
+- [Hexo](https://hexo.io/) (Node.js)
+- [Gatsby](https://www.gatsbyjs.org/) (Node.js, React)
+- [Pelican](https://blog.getpelican.com/) (Python)
 - ...
+- [Top Ten Liste 2017](https://www.netlify.com/blog/2017/05/25/top-ten-static-site-generators-of-2017/)
+- [Übersicht nach Beliebtheit](https://www.staticgen.com/)
 
 ---
 
@@ -357,8 +371,5 @@ Die Templatesprache
 
 ### Fragen?
 
-[madtsch.github.io][98]  
-[ogobrecht.github.io][99]
-
-[98]: https://Madtsch.github.io
-[99]: https://ogobrecht.github.io
+[madtsch.github.io](https://madtsch.github.io)  
+[ogobrecht.github.io](https://ogobrecht.github.io)
