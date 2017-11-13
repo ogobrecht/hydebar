@@ -1,6 +1,12 @@
-{%- comment %}An post can have multiple authors, so we have to iterate over the authors{% endcomment %}
+{%- comment %}
+An post can have multiple authors - we have to iterate over the authors.
+An post can have categories and tags - we loop first over the categories and then over the tags.
+{%- endcomment %}
 
 {%- assign authors = page.author | default: site.author %}
+{%- assign num_categories = page.categories.size %}
+{%- assign num_tags = page.tags.size %}
+
 {%- for author in authors %}
   {%- if site.data.authors[author].avatar %}<img class="left author circle" src="{{ site.data.authors[author].avatar }}" title="{{ site.data.authors[author].name }}" alt="{{ site.data.authors[author].name }}" />{% endif %}
 {%- endfor -%}
@@ -12,8 +18,14 @@
   {%- if site.data.authors[author].url %} <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>{% else %}{{ site.data.authors[author].name }}{% endif %}
 {%- endfor -%}
 
-<br>{% include translation text='posted' %} <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include translated-date date=page.date %}</time> {% include translation text='in' %}
+<br>{% include translation text='posted' %} <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include translated-date date=page.date %}</time>
+
+{%- if num_categories > 0 or num_tags > 0 %} {% include translation text='in' %} {% endif %}
+
+{%- for category in page.categories %}
+  {%- unless forloop.first %}{% if forloop.last and num_tags == 0 %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}<a href="{{ site.baseurl }}/categories/{{ category }}">{{ site.data.labels.categories[category] | default: category }}</a>
+{%- endfor %}
 
 {%- for tag in page.tags %}
-  {%- unless forloop.first %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %} <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ site.data.taglabels[tag] | default: tag }}</a>
+  {%- unless forloop.first and num_categories == 0 %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}<a href="{{ site.baseurl }}/tags/{{ tag }}">{{ site.data.labels.tags[tag] | default: tag }}</a>
 {%- endfor -%}

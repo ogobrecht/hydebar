@@ -15,7 +15,8 @@ The template has no dependencies on external plugins - therefore it can run on G
 - Responsive, CSS driven sidebar
 - Reveal.js slideshow integration
 - Archive page
-- Tag index
+- Category index/pages
+- Tag index/pages
 - Atom feed
 - robots.txt, sitemap.xml
 - 404 error page which shows the archive
@@ -33,14 +34,14 @@ HTML figure elements written in raw HTML - Markdown encourage you to use HTML wh
 <img
   src="/hydebar/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/editor-atom.png"
   alt="Atom editor" />
-<figcaption><em>A real figure cation for an image</em></figcaption></figure>
+<figcaption>A real figure caption for an image</figcaption></figure>
 
 
 <figure markdown="1">
 ```js
 var test = "dummy JavaScript code"
 ```
-<figcaption><em>A real figure cation for a code snippet</em></figcaption></figure>
+<figcaption>A real figure caption for a code snippet</figcaption></figure>
 
 
 Faked image and code captions with class `.figcaption` or simply `.caption` - we use here the possibility to add attributes to elements - a functionality from the Markdown converter [Kramdown](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions) - the resulting paragraph with the class `caption` has a negative `margin-top` and is therefore more aligned to the previous element:
@@ -49,17 +50,17 @@ Faked image and code captions with class `.figcaption` or simply `.caption` - we
 ![Atom Editor](/hydebar/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/editor-atom.png)
 
 {:.caption}
-*Example caption for a picture*
+Example caption for a picture
 ```
 
 {:.caption}
-*Example caption for a Markdown code fragment*
+Example caption for a Markdown code fragment
 
 
 ![Atom Editor](/hydebar/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/editor-atom.png)
 
 {:.caption}
-*Example caption for an image*
+Example caption for an image
 
 ## Tag Pages
 

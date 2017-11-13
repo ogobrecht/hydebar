@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<!--content-begin-->
+
+{%- assign category = page.path | remove_first: "categories/" | remove_first: ".md" -%}
+{%- assign count = site.categories[category] | size %}
+
+<h1 class="page-heading">{% include translation text='posts_in_category' %}: {{ site.data.labels.categories[category] | default: category }}</h1>
+
+{{ content }}
+
+{%- if count == 0 -%}
+<p>{% include translation text='no_posts_category' %}.</p>
+{%- else -%}
+{%- include post-list-by-category.html category=category -%}
+{%- endif %}
+
+<!--content-end-->

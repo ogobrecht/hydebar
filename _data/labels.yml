@@ -1,0 +1,7 @@
+categories:
+  testcategory: TestCategory # we don't use categories on this site, this is only for testing
+tags:
+  jekyll: Jekyll
+  reveal: Reveal.js
+  markdown: Markdown
+  slides: Slides

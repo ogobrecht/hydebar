@@ -2,16 +2,16 @@
       <h3>{% include translation text='tags' %}</h3>
       <ul>
   {%- capture tags %}
-  {%- for tag in site.tags %}
-    {{ tag[0] }}#{{ tag[1].size }}
+  {%- for item in site.tags %}
+    {{ item[0] }}#{{ item[1].size }}
   {%- endfor %}
   {%- endcapture %}
   {%- assign sortedtags = tags | split:' ' | sort %}
-  {%- for sortedtag in sortedtags %}
-    {%- assign tagitems = sortedtag | split: '#' %}
-    {%- assign tag = tagitems[0] %}
-    {%- assign count = tagitems[1] %}
-    {%- assign label = site.data.taglabels[tag] | default: tag %}
+  {%- for item in sortedtags %}
+    {%- assign tag_array = item | split: '#' %}
+    {%- assign tag = tag_array[0] %}
+    {%- assign count = tag_array[1] %}
+    {%- assign label = site.data.labels.tags[tag] | default: tag %}
     {%- assign href = '/tags/' | append: tag %}
         <li><a{% if href == page.url %} class="active"{% endif %} href="{{ site.baseurl | append: href }}">{{ label }} ({{ count }})</a></li>
   {%- endfor %}

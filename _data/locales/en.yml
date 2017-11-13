@@ -5,6 +5,7 @@ ui:
   # Table of Contents
   toc: Table of Contents
   # navigation
+  categories: Categories
   tags: Tags
   contact: Contact
   legal: Legal Things
@@ -19,9 +20,12 @@ ui:
   in: in
   # post footer
   last_modified: Last modified on
+  # category pages
+  posts_in_category: Posts in the category
+  no_posts_category: No posts in this category at this time
   # tag pages
   posts_tagged_with: Posts tagged with
-  no_posts_with_this_tag: No posts with this tag at this time
+  no_posts_tag: No posts with this tag at this time
   # 404 error page
   page_not_found: The page your are looking for is not existing. This is normally shown by the webserver with a status code 404 error page. For your convenience here a list of all available posts
   # Reveal.js integration

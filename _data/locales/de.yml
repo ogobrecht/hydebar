@@ -5,7 +5,8 @@ ui:
   # Table of Contents
   toc: Inhaltsverzeichnis
   # navigation
-  tags: Tags
+  categories: Kategorien
+  tags: Schlagworte
   contact: Kontakt
   legal: Rechtliches
   # index.md
@@ -19,9 +20,12 @@ ui:
   in: in
   # post footer
   last_modified: Zuletzt geändert am
+  # category pages
+  posts_in_category: Beiträge in der Kategorie
+  no_posts_category: Zur Zeit gibt es keine Beiträge in dieser Kategorie
   # tag pages
   posts_tagged_with: Beiträge gekennzeichnet mit
-  no_posts_with_this_tag: Zur Zeit sind keine Beiträge mit diesem Tag gekennzeichnet
+  no_posts_tag: Zur Zeit sind keine Beiträge mit diesem Schlagwort gekennzeichnet
   # 404 error page
   page_not_found: Die Seite, nach der Du schaust, existiert nicht. Normalerweise zeigt Dir der Webserver hier nur eine Statuscode-404-Fehlerseite. Für Deine Bequemlichkeit zeigen wir Dir hier einfach alle verfügbaren Beiträge
   # Reveal.js integration

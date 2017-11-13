@@ -1,0 +1,19 @@
+{%- if site.categories.size > 0 %}
+      <h3>{% include translation text='categories' %}</h3>
+      <ul>
+  {%- capture categories %}
+  {%- for item in site.categories %}
+    {{ item[0] }}#{{ item[1].size }}
+  {%- endfor %}
+  {%- endcapture %}
+  {%- assign sorted_categories = categories | split:' ' | sort %}
+  {%- for item in sorted_categories %}
+    {%- assign category_array = item | split: '#' %}
+    {%- assign category = category_array[0] %}
+    {%- assign count = category_array[1] %}
+    {%- assign label = site.data.labels.categories[category] | default: category %}
+    {%- assign href = '/categories/' | append: category %}
+        <li><a{% if href == page.url %} class="active"{% endif %} href="{{ site.baseurl | append: href }}">{{ label }} ({{ count }})</a></li>
+  {%- endfor %}
+      </ul>
+{%- endif -%}
