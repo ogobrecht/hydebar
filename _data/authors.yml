@@ -4,7 +4,7 @@ ogobrecht:
   # local or remote URL to the authors home page, used in post meta:
   url: https://ogobrecht.github.io
   # local or remote URL to an avatar image of the author, used in post meta:
-  avatar: https://www.gravatar.com/avatar/2cfa313826aa6986c3612b1fcc1ef912?s=200
+  avatar: https://avatars2.githubusercontent.com/u/10425445?s=400&amp;v=4
   # all social media entries are listed in the navigation menu under "Contact" - the first entry will be always your email address, if you provided one:
   social_media:
     - name: GitHub
@@ -17,10 +17,12 @@ ogobrecht:
 # You can list as many authors as you like. The minimum needed information is the author name
 # On each post you can overwrite the site author in the front matter like so:
 # author: otherAuthorName
+# author: [ogobrecht, madtsch]
 madtsch:
   name: Markus Dötsch
   email:
-  url: https://other-authors-homepage.com
-  avatar: https://www.gravatar.com/avatar/2cfa313826aa6986c3612b1fcc1ef912?s=200&d=mm&f=y
+  url: https://madtsch.github.io
+  avatar: https://avatars1.githubusercontent.com/u/30468854?s=200&amp;v=4
+
 otherAuthorShortName:
   name: Other Author

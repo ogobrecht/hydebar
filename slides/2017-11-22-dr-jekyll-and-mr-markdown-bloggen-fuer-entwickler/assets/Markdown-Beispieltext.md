@@ -9,7 +9,7 @@ Ein Absatz mit *kursivem Text* , _auch kursiv_, **fetter Text**, __auch fett__, 
   + Oder auch ein Pluszeichen
 * Ein Link: [Markdown Syntax][1]
 
-![Ein Bild](/assets/john-gruber.png)
+![Ein Bild](john-gruber.png)
 
 Ein wenig Quellcode:
 ```js

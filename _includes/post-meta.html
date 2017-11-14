@@ -20,12 +20,14 @@ An post can have categories and tags - we loop first over the categories and the
 
 <br>{% include translation text='posted' %} <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include translated-date date=page.date %}</time>
 
-{%- if num_categories > 0 or num_tags > 0 %} {% include translation text='in' %} {% endif %}
+{%- if num_categories > 0 %} {% include translation text='in' %} {% endif %}
 
 {%- for category in page.categories %}
-  {%- unless forloop.first %}{% if forloop.last and num_tags == 0 %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}<a href="{{ site.baseurl }}/categories/{{ category }}">{{ site.data.labels.categories[category] | default: category }}</a>
+  {%- unless forloop.first %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}<a href="{{ site.baseurl }}/categories/{{ category }}">{{ site.data.labels.categories[category] | default: category }}</a>
 {%- endfor %}
 
+{%- if num_tags > 0 %} - {% include translation text='tagged_with' %} {% endif %}
+
 {%- for tag in page.tags %}
-  {%- unless forloop.first and num_categories == 0 %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}<a href="{{ site.baseurl }}/tags/{{ tag }}">{{ site.data.labels.tags[tag] | default: tag }}</a>
+  {%- unless forloop.first %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}<a href="{{ site.baseurl }}/tags/{{ tag }}">{{ site.data.labels.tags[tag] | default: tag }}</a>
 {%- endfor -%}

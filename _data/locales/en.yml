@@ -18,6 +18,7 @@ ui:
   and: and
   posted: Posted on
   in: in
+  tagged_with: tagged with
   # post footer
   last_modified: Last modified on
   # category pages

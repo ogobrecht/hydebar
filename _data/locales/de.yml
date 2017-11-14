@@ -18,6 +18,7 @@ ui:
   and: und
   posted: Veröffentlicht am
   in: in
+  tagged_with: gekennzeichnet mit
   # post footer
   last_modified: Zuletzt geändert am
   # category pages

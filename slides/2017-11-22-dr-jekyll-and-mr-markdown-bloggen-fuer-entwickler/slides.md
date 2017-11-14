@@ -31,6 +31,7 @@ Genauer, ein Ruby Skript
 
 - Geschwindigkeit
 - Sicherheit
+- Anpassbarkeit (übersichtlich)
 
 ---
 
@@ -122,7 +123,7 @@ einer ***Kombination aus fett und kursiv***.
 
 [Ein Link](https://daringfireball.net/projects/markdown/syntax)
 
-![Ein Bild](/assets/john-gruber.png)
+![Ein Bild](./assets/john-gruber.png)
 ```
 
 ---
@@ -139,7 +140,7 @@ Markdown = Schreib-Format
 
 ![Editor Atom mit Live-Vorschau](./assets/editor-atom.png)
 
-[Editor Atom](https://atom.io/) mit [Plugin Markdown-Writer](https://atom.io/packages/markdown-writer)
+Beispiel: [Editor Atom](https://atom.io/) mit [Plugin Markdown-Writer](https://atom.io/packages/markdown-writer)
 
 ---
 
@@ -237,9 +238,7 @@ bundle exec htmlproofer ./_site \
 ### Spätere Updates
 
 ```sh
-bundle install
-bundle update github-pages
-bundle update html-proofer
+bundle update
 ```
 
 -----
@@ -263,7 +262,7 @@ bundle update html-proofer
 
 - Editor Atom
   - Plugin: Markdown-Writer
-- Editor Visual Studi Code
+- Editor Visual Studio Code
   - Plugin: Markdown All in One
 - ...
 
@@ -326,17 +325,51 @@ Die Metadaten
 -----
 
 ## Jekyll selbst erweitern (og)
-Beispiel Reveal.js Integration
+
+Beispiel: [Reveal.js](http://lab.hakim.se/reveal-js/) Integration
+
+Was uns hilft: Jekylls Übersichtlichkeit und Anpassbarkeit
+
+FIXME: Liquid erklären
 
 ---
 
-### Liquid
+### Warum Reveal.js?
 
-Die Templatesprache
+- Slides HTML5 basiert
+- Touch Support für mobile Geräte
+- Unterstützt Markdown
 
-- https://shopify.github.io/liquid/
-- https://shopify.github.io/liquid/basics/variations/
-- http://jekyllrb.com/docs/templates/
+---
+
+### Was brauchen wir?
+
+- Layout für Reveal.js
+- Include zur Einbindung in Posts
+- Eine Markdowndatei für Slides
+- Die Reveal.js Library Files
+
+---
+
+### Ideen zur Umsetzung
+
+- Ein Ordner pro Präsentation
+- `index.md` für Reveal.js
+- `slides.md` für Slides (ohne Front Matter)
+- Reveal Libs in `/assets`
+- Include mit Variable `path`
+
+---
+
+### Hilfe zur Umsetzung
+
+- [Jekyll Templates](https://jekyllrb.com/docs/templates/) (Liquid)
+- [Liquid Template Language](https://shopify.github.io/liquid/)
+- [Reveal.js Doku](https://github.com/hakimel/reveal.js)
+
+---
+
+### Demo...
 
 ---
 
@@ -355,7 +388,7 @@ Die Templatesprache
 
 ---
 
-## Weitere Static Site Generators
+### Weitere Static Site Generators
 
 - [Hugo](https://gohugo.io/) (Go)
 - [Hexo](https://hexo.io/) (Node.js)
@@ -364,6 +397,13 @@ Die Templatesprache
 - ...
 - [Top Ten Liste 2017](https://www.netlify.com/blog/2017/05/25/top-ten-static-site-generators-of-2017/)
 - [Übersicht nach Beliebtheit](https://www.staticgen.com/)
+
+---
+
+### PL/SQL Template Engines
+
+- [FTLDB](https://github.com/ftldb/ftldb/blob/master/README.md)
+- [tePLSQL](https://github.com/osalvador/tePLSQL/blob/master/README.md)
 
 ---
 

@@ -15,7 +15,7 @@ Your motivation comes here...
 
 ## This Site
 
-This site is built with [Jekyll][1], a static site generator, and the [Jekyll sidebar template][2].
+This site is built with [Jekyll][1] & [HydeBar][2].
 
 [1]: https://jekyllrb.com
-[2]: https://github.com/ogobrecht/jekyll-sidebar-template
+[2]: https://github.com/ogobrecht/hydebar
