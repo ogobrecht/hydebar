@@ -1,21 +1,43 @@
+<!-- {% raw %} -->
+
 ## Dr. Jekyll and Mr. Markdown
 ### Bloggen für Entwickler
 
-Markus Dötsch, Ottmar Gobrecht
+Ottmar Gobrecht, Markus Dötsch
 
 DOAG Konferenz 2017, Nürnberg
 
 -----
 
-## Motivation (md)
+## Motivation
 
 ---
 
-## Teilt Euer Wissen!
+### Wissen teilen!
+
+Oder zumindest bewahren! :)
+
+---
+
+### Schnell und unkompliziert
+
+Hürden minimieren!
+
+---
+
+### Bekannte Tools
+
+Context Switches vermeiden!
+
+---
+
+### Bloggen als Teil der "normalen" Arbeit
+
+Nicht als extra Teil ansehen!
 
 -----
 
-## Was ist Jekyll? (og)
+## Was ist Jekyll?
 
 ---
 
@@ -35,7 +57,7 @@ Genauer, ein Ruby Skript
 
 ---
 
-Geschwindigkeit dynamisch - schnell (DSL)
+Geschwindigkeit dynamisch - DSL
 
 ![WordPress Beispiel](./assets/ladezeit-dynamisch.png)
 
@@ -43,7 +65,7 @@ Geschwindigkeit dynamisch - schnell (DSL)
 
 ---
 
-Geschwindigkeit statisch - schnell (DSL)
+Geschwindigkeit statisch - DSL
 
 ![Jekyll Beispiel](./assets/ladezeit-statisch.png)
 
@@ -51,7 +73,7 @@ Geschwindigkeit statisch - schnell (DSL)
 
 ---
 
-Geschwindigkeit dynamisch - langsam (mobil)
+Geschwindigkeit dynamisch - mobil 3G
 
 ![WordPress Beispiel](./assets/ladezeit-dynamisch-langsam-mobil.png)
 
@@ -59,7 +81,7 @@ Geschwindigkeit dynamisch - langsam (mobil)
 
 ---
 
-Geschwindigkeit statisch - langsam (mobil)
+Geschwindigkeit statisch - mobil 3G
 
 ![Jekyll Beispiel](./assets/ladezeit-statisch-langsam-mobil.png)
 
@@ -91,11 +113,17 @@ Geschwindigkeit statisch - langsam (mobil)
 
 ---
 
-### FIXME Screenshot DokuWiki einfügen wegen Sicherheit
+### Ist das sicher? FIXME: Screenshot DokuWiki einfügen
+
+![DokuWiki Beispiel](./assets/dokuwiki-updates.png)
+
+---
+
+### Fragen?
 
 -----
 
-## Was ist Markdown? (og)
+## Was ist Markdown?
 
 ---
 
@@ -142,17 +170,13 @@ Markdown = Schreib-Format
 
 Beispiel: [Editor Atom](https://atom.io/) mit [Plugin Markdown-Writer](https://atom.io/packages/markdown-writer)
 
----
-
-...
-
 -----
 
-## Online in 3 Minuten (og)
-
-Alles im Browser
+## Online in 5 Minuten
 
 ---
+
+### Alles im Browser
 
 - Login to [GitHub](https://github.com/)
 - Fork repository [HydeBar](https://github.com/ogobrecht/hydebar)
@@ -167,83 +191,116 @@ Alles im Browser
 
 - `_data/authors`
 - `_config.yml`
-  - permalink: /posts/:year-:month-:day-:title (einstellen und nicht mehre ändern)
+  - Permalink:
+    - `/posts/:year-:month-:day-:title`
+    - [Jekyll Doku](https://jekyllrb.com/docs/permalinks/)
+  - Sidebar
   - ...
 
 ---
 
-...
+### Fragen?
 
 -----
 
-## Optionale Installation lokal (md)
+## Optionale Installation lokal
 
-Für Neugierige und Bastler
+Für Neugierige und "Selbermacher"
 
 ---
 
-### Installation Betriebssystem
+### Installation Git Client
 
-- Git Client
-- Ruby
+- [Tutorial 1](https://git-scm.com/docs/gittutorial)
+- [Tutorial 2](http://rogerdudler.github.io/git-guide/index.de.html)
 
-Paketmanager und Jekyll:
+---
+
+### Installation Ruby
+
+- [Doku Installation](https://www.ruby-lang.org/de/documentation/installation/)
+- [Download](https://rubyinstaller.org/)
+
+---
+
+### Installation Jekyll
+
+- [Doku Installation](https://jekyllrb.com/docs/installation/)
+- [Doku GitHub Pages & Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+- Paketmanager und Jekyll
 ```sh
 gem install bundler
-bundle install jekyll
+bundle install
 ```
+
+Anmerkung:
+
+- Windows ist von Jekyll nicht offiziell unterstützt
+- Dokumentation: <https://jekyllrb.com/docs/windows/>
+- Windows 10 - Integrierte Bash verwenden
 
 ---
 
 ### Installation Blog
 
-Im Projektverzeichnis:
+Im (übergeordneten) Projektverzeichnis:
 ```sh
-git checkout yourForkedRepoURL.git
+git clone yourForkedRepoURL.git
+```
+
+Das lokale Verzeichnis wird automatisch angelegt
+
+```sh
+cd yourForkedRepoName
 bundle install
 ```
+
+Notwendige Jekyll files werden installiert
+
+Anmerkung:
+
+GitHub URL = `https://github.com/UserName/RepoName.git`
+Beispiel: <https://github.com/Madtsch/madtsch.github.io.git>
 
 ---
 
 ### Starten Devserver
 
-Refresh bei Änderungen
+Automatischer Refresh bei Änderungen
 ```sh
-bundle exec kekyll serve
+bundle exec jekyll serve
 ```
-Einmalig
+
+<small markdown="1">Server ist unter <http://127.0.0.1:4000> aufrufbar</small>
+
+Einmaliger Refresh
 ```sh
 bundle exec jekyll build
-```
-Linkprüfung
-```sh
-bundle exec htmlproofer ./_site \
-  --assume-extension \
-  --file-ignore /.*\/assets\/reveal\.js\/.*/
-```
-
-Anmerkung:
-
-Wenn die site.basurl nicht leer sein sollte, dann wird "htmlproofer" vermutlich sehr viele Fehler werfen, weil keine internen Links auf dem Development Server stimmen. Das kann man umgehen, in dem man die Seite in dem entsprechenden Unterverzeichnis erstellen lässt - hier "jekyll-sidebar-template":
-
-```ruby
-bundle exec jekyll build -d _site/jekyll-sidebar-template
-bundle exec htmlproofer ./_site \
-  --assume-extension \
-  --file-ignore /.*\/assets\/reveal\.js\/.*/
 ```
 
 ---
 
-### Spätere Updates
+### Publizieren der Änderungen auf GitHub
+
+```sh
+git push yourForkedRepoURL.git
+```
+
+---
+
+### Spätere Updates von Jekyll
 
 ```sh
 bundle update
 ```
 
+---
+
+### Fragen?
+
 -----
 
-## Inhalte Erstellen (md)
+## Inhalte Erstellen
 
 ---
 
@@ -264,7 +321,7 @@ bundle update
   - Plugin: Markdown-Writer
 - Editor Visual Studio Code
   - Plugin: Markdown All in One
-- ...
+- Jede gute IDE hat Plugins für Markdown
 
 ---
 
@@ -272,65 +329,160 @@ bundle update
 
 ---
 
-### Spezialitäten im Jekyll Umfeld
-
-- Reveal.js
-- Bild: `![Python Pandas](./assets/pandas.pydata.org.png) <!-- .element: width="600px" -->`
-- Beispiel Bildergalerien (Touch-Ünterstützung)
-- TOC: {% raw %}`{% include toc %}`{% endraw %}
-
----
-
-Demo...
-
----
-
-...
+### Fragen?
 
 -----
 
-## Die Jekyll Blackbox (md)
+## Die Jekyll Blackbox
 
 ---
 
 ### Was ist ein Post?
 
----
-
-- liegt im Ordner `_posts`
-- Namenskonvention (ISO Datum)
--
+- Liegt irgendwo unterhalb von `_posts`
+- Namenskonvention
+  - `yyyy-mm-dd-post-titel.md`
+- [Jekyll Doku: Writing posts](https://jekyllrb.com/docs/posts/)
 
 ---
 
 ### Was ist eine Page?
 
+- Alles, was kein Post ist
+  - Also, nicht zeitbasiert
+  - Statische Seiten eben ;-)
+- [Jekyll Doku: Creating pages](https://jekyllrb.com/docs/pages/)
+- [Jekyll Doku: Static files](https://jekyllrb.com/docs/static-files/)
+
 ---
 
-### Frontmatter
+### Frontmatter?
 
-Die Metadaten
+- Die Metadaten von posts und pages
+- [Jekyll Doku: Front Matter](https://jekyllrb.com/docs/frontmatter/)
+
+```yaml
+---
+title: Dr. Jekyll and Mr. Markdown - Bloggen für Entwickler
+subtitle: DOAG Konferenz 2017, Nürnberg
+categories: [slides]
+tags: [jekyll, markdown]
+author: [ogobrecht, madtsch]
+lang: de
+last_modified_at: 2017-11-12
+---
+Hier kommt dann der eigentliche Artikel
+...
+```
 
 ---
 
 ### Verzeichnisstruktur
 
+```
+.
+├── _config.yml
+├── _data
+|   └── members.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.md
+|   └── on-simplicity-in-technology.md
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+|   └── 2009-04-26-barcamp-boston-4-roundup.md
+├── _sass
+|   ├── _base.scss
+|   └── _layout.scss
+├── _site
+├── .jekyll-metadata
+└── index.html # can also be an 'index.md' with valid YAML Frontmatter
+```
+[Jekyll Doku: Directory structure](https://jekyllrb.com/docs/structure/)
+
+
 ---
 
-### Implizite Metadaten
+### Posts & Pages verlinken 1
 
-- Verweis Doku
--
+URLs Mit Liquid Includes (gleich mehr dazu)
+
+```
+{{ site.baseurl }}{% link _collection/name-of-document.md %}
+{{ site.baseurl }}{% link _posts/2016-07-26-name-of-post.md %}
+{{ site.baseurl }}{% link news/index.html %}
+{{ site.baseurl }}{% link /assets/files/doc.pdf %}
+```
+<small markdown="1">`{{ site.baseurl }}` ist je nach Konfiguration optional</small>
+
+[Jekyll Doku: Links](https://jekyllrb.com/docs/templates/#links)
+
+---
+
+### Posts & Pages verlinken 2
+
+Mit Markdown Link Syntax & Include
+
+```md
+[Link to a document]({% link _collection/name-of-document.md %})
+[Link to a post]({% link _posts/2016-07-26-name-of-post.md %})
+[Link to a page]({{ site.baseurl }}{% link news/index.html %})
+[Link to a file]({{ site.baseurl }}{% link /assets/doc.pdf %})
+```
+<small markdown="1">`{{ site.baseurl }}` ist je nach Konfiguration optional</small>
+
+---
+
+### Posts & Pages verlinken 3
+
+Nur mit Markdown...
+
+```md
+[Link to a post](/posts/2016-07-26-name-of-post.html)
+[Link to a page]({{ site.baseurl }}/news/index.html)
+[Link to a file]({{ site.baseurl }}/assets/doc.pdf)
+```
+<small markdown="1">`{{ site.baseurl }}` ist je nach Konfiguration optional</small>
+
+Wo ist der Unterschied?
+
+Das link Include sorgt für korrekte Permalinks!
+
+---
+
+### Demo...
+
+---
+
+### Fragen?
 
 -----
 
-## Jekyll selbst erweitern (og)
+## Jekyll selbst erweitern
 
 Beispiel: [Reveal.js](http://lab.hakim.se/reveal-js/) Integration
 
 Was uns hilft: Jekylls Übersichtlichkeit und Anpassbarkeit
 
-FIXME: Liquid erklären
+---
+
+### Die Grundlage Liquid
+
+Jekylls Template Engine
+
+- Layouts
+- Includes
+- [Jekyll Templates](https://jekyllrb.com/docs/templates/) (Liquid)
+- [Liquid Template Language](https://shopify.github.io/liquid/)
+
+---
+
+### Demo...
 
 ---
 
@@ -339,6 +491,7 @@ FIXME: Liquid erklären
 - Slides HTML5 basiert
 - Touch Support für mobile Geräte
 - Unterstützt Markdown
+- [Reveal.js Doku](https://github.com/hakimel/reveal.js)
 
 ---
 
@@ -361,23 +514,15 @@ FIXME: Liquid erklären
 
 ---
 
-### Hilfe zur Umsetzung
-
-- [Jekyll Templates](https://jekyllrb.com/docs/templates/) (Liquid)
-- [Liquid Template Language](https://shopify.github.io/liquid/)
-- [Reveal.js Doku](https://github.com/hakimel/reveal.js)
-
----
-
 ### Demo...
 
 ---
 
-...
+### Fragen?
 
 -----
 
-## Links (og)
+## Links
 
 ---
 
@@ -411,5 +556,8 @@ FIXME: Liquid erklären
 
 ### Fragen?
 
-[madtsch.github.io](https://madtsch.github.io)  
 [ogobrecht.github.io](https://ogobrecht.github.io)
+
+[madtsch.github.io](https://madtsch.github.io)  
+
+<!-- {% endraw %} -->

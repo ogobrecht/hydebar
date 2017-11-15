@@ -2,7 +2,6 @@
 title: Hello World
 subtitle: HydeBar, a Jekyll sidebar template with Reveal.js integration
 categories: [misc]
-tags: [jekyll, reveal]
 lang: en
 ---
 

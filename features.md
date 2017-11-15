@@ -31,8 +31,8 @@ HTML figure elements written in raw HTML - Markdown encourage you to use HTML wh
 
 <figure markdown="0">
 <img
-  src="/hydebar/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/editor-atom.png"
-  alt="Atom editor" />
+  src="/hydebar/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/page-speed-statisch-desktop.png"
+  alt="Page Speed" />
 <figcaption>A real figure caption for an image</figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ var test = "dummy JavaScript code"
 Faked image and code captions with class `.figcaption` or simply `.caption` - we use here the possibility to add attributes to elements - a functionality from the Markdown converter [Kramdown](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions) - the resulting paragraph with the class `caption` has a negative `margin-top` and is therefore more aligned to the previous element:
 
 ```md
-![Atom Editor](/hydebar/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/editor-atom.png)
+![Page Speed](/hydebar/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/page-speed-statisch-desktop.png)
 
 {:.caption}
 Example caption for a picture
@@ -58,7 +58,7 @@ Example caption for a picture
 Example caption for a Markdown code fragment
 
 
-![Atom Editor](/hydebar/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/editor-atom.png)
+![Page Speed](/hydebar/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/page-speed-statisch-mobil.png)
 
 {:.caption}
 Example caption for an image
