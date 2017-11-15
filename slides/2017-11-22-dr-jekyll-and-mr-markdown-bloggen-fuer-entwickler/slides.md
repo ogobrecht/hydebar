@@ -170,6 +170,10 @@ Markdown = Schreib-Format
 
 Beispiel: [Editor Atom](https://atom.io/) mit [Plugin Markdown-Writer](https://atom.io/packages/markdown-writer)
 
+---
+
+### Fragen?
+
 -----
 
 ## Online in 5 Minuten
