@@ -111,9 +111,8 @@ Geschwindigkeit statisch - mobil 3G
 
 ### Ist das sicher?
 
-![DokuWiki Beispiel](./assets/dokuwiki-updates.png)
-
-<small>Ein DokuWiki, was längerer Zeit nicht upgedated wurde...</small>
+![DokuWiki Beispiel](./assets/dokuwiki-updates.png)  
+<small>Ein DokuWiki, das längerer Zeit nicht aktualisiert wurde...</small>
 
 ---
 
