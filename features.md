@@ -6,7 +6,7 @@ sidebar-title: Features
 
 HydeBar is a fully responsive HTML5 Jekyll sidebar template for the static site generator Jekyll. Except for the integration of the Reveal.js slideshow, Disqus comments and Google analytics it needs no activated JavaScript on the client side. The sidebar is complete CSS driven.
 
-The template has no dependencies on external plugins - therefore it can run on GitHub Pages. Except for the Jekyll blackbox itself (which renders your site) everything is implemented with Liquid templates located in the directories `_layout` and `_includes`. No hidden secrets and highly customizable to your needs :-)
+The template has no dependencies on external plugins - therefore it can run on GitHub Pages. Except for the Jekyll blackbox itself (which renders your site) everything is implemented with Liquid templates located in the directories `_layouts` and `_includes`. No hidden secrets and highly customizable to your needs :-)
 
 ## Feature List
 
@@ -14,8 +14,8 @@ The template has no dependencies on external plugins - therefore it can run on G
 - No dependencies - runs on GitHub pages
 - Responsive, CSS driven sidebar
 - Reveal.js slideshow integration
-- Archive page
-- Category & tag index pages
+- Posts archive page by year
+- Categories & tags index pages
 - Atom feed
 - robots.txt, sitemap.xml
 - Custom 404 error page which shows the post archive
