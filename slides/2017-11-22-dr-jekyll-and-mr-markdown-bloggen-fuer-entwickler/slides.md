@@ -13,27 +13,27 @@ DOAG Konferenz 2017, Nürnberg
 
 ---
 
-### Wissen teilen!
+### Wissen teilen
 
-Oder zumindest bewahren! :)
+Oder zumindest bewahren :-)
 
 ---
 
 ### Schnell und unkompliziert
 
-Hürden minimieren!
+Hürden minimieren
 
 ---
 
 ### Bekannte Tools
 
-Context Switches vermeiden!
+Context Switches vermeiden
 
 ---
 
 ### Bloggen als Teil der "normalen" Arbeit
 
-Nicht als extra Teil ansehen!
+Nicht als extra Teil ansehen
 
 -----
 
@@ -43,7 +43,7 @@ Nicht als extra Teil ansehen!
 
 ### Ein Generator für statische Webseiten
 
-Genauer, ein Ruby Skript
+Genauer: Ein Ruby Skript
 
 ---
 
@@ -59,33 +59,29 @@ Genauer, ein Ruby Skript
 
 Geschwindigkeit dynamisch - DSL
 
-![WordPress Beispiel](./assets/ladezeit-dynamisch.png)
-
-87 Requests - 1,3 MB - 2,7 s Ladezeit
+![WordPress Beispiel](./assets/ladezeit-dynamisch.png)  
+<small>87 Requests - 1,3 MB - 2,7 s Ladezeit</small>
 
 ---
 
 Geschwindigkeit statisch - DSL
 
-![Jekyll Beispiel](./assets/ladezeit-statisch.png)
-
-2 Requests - 5 KB - 0,1 s Ladezeit
+![Jekyll Beispiel](./assets/ladezeit-statisch.png)  
+<small>2 Requests - 5 KB - 0,1 s Ladezeit</small>
 
 ---
 
 Geschwindigkeit dynamisch - mobil 3G
 
-![WordPress Beispiel](./assets/ladezeit-dynamisch-langsam-mobil.png)
-
-86 Requests - 1,3 MB - 36,3 s Ladezeit
+![WordPress Beispiel](./assets/ladezeit-dynamisch-langsam-mobil.png)  
+<small>86 Requests - 1,3 MB - 36,3 s Ladezeit</small>
 
 ---
 
 Geschwindigkeit statisch - mobil 3G
 
-![Jekyll Beispiel](./assets/ladezeit-statisch-langsam-mobil.png)
-
-2 Requests - 5 KB - 4,2 s Ladezeit
+![Jekyll Beispiel](./assets/ladezeit-statisch-langsam-mobil.png)  
+<small>2 Requests - 5 KB - 4,2 s Ladezeit</small>
 
 ---
 
@@ -113,9 +109,11 @@ Geschwindigkeit statisch - mobil 3G
 
 ---
 
-### Ist das sicher? FIXME: Screenshot DokuWiki einfügen
+### Ist das sicher?
 
 ![DokuWiki Beispiel](./assets/dokuwiki-updates.png)
+
+<small>Ein DokuWiki, was längerer Zeit nicht upgedated wurde...</small>
 
 ---
 
@@ -168,7 +166,7 @@ Markdown = Schreib-Format
 
 ![Editor Atom mit Live-Vorschau](./assets/editor-atom.png)
 
-Beispiel: [Editor Atom](https://atom.io/) mit [Plugin Markdown-Writer](https://atom.io/packages/markdown-writer)
+<small>Beispiel: [Editor Atom](https://atom.io/) mit [Plugin Markdown-Writer](https://atom.io/packages/markdown-writer)</small>
 
 ---
 
@@ -197,7 +195,7 @@ Beispiel: [Editor Atom](https://atom.io/) mit [Plugin Markdown-Writer](https://a
 - `_config.yml`
   - Permalink:
     - `/posts/:year-:month-:day-:title`
-    - [Jekyll Doku](https://jekyllrb.com/docs/permalinks/)
+    - [Jekyll Doku: Permalinks](https://jekyllrb.com/docs/permalinks/)
   - Sidebar
   - ...
 
@@ -224,24 +222,10 @@ Für Neugierige und "Selbermacher"
 
 - [Doku Installation](https://www.ruby-lang.org/de/documentation/installation/)
 - [Download](https://rubyinstaller.org/)
-
----
-
-### Installation Jekyll
-
-- [Doku Installation](https://jekyllrb.com/docs/installation/)
-- [Doku GitHub Pages & Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
-- Paketmanager und Jekyll
+- Paketmanager Bundler
 ```sh
 gem install bundler
-bundle install
 ```
-
-Anmerkung:
-
-- Windows ist von Jekyll nicht offiziell unterstützt
-- Dokumentation: <https://jekyllrb.com/docs/windows/>
-- Windows 10 - Integrierte Bash verwenden
 
 ---
 
@@ -259,18 +243,28 @@ cd yourForkedRepoName
 bundle install
 ```
 
-Notwendige Jekyll files werden installiert
+<small>"bundle install" installiert alle Abhängigkeiten für Jekyll, die im  
+"Gemfile" konfiguriert sind - siehe Projektverzeichnis</small>
+
+- [Doku Installation](https://jekyllrb.com/docs/installation/)
+- [Doku GitHub Pages & Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+
 
 Anmerkung:
 
 GitHub URL = `https://github.com/UserName/RepoName.git`
 Beispiel: <https://github.com/Madtsch/madtsch.github.io.git>
 
+- Windows ist von Jekyll nicht offiziell unterstützt
+- Dokumentation: <https://jekyllrb.com/docs/windows/>
+- Windows 10 - Integrierte Bash verwenden
+
 ---
 
 ### Starten Devserver
 
 Automatischer Refresh bei Änderungen
+
 ```sh
 bundle exec jekyll serve
 ```
@@ -278,6 +272,7 @@ bundle exec jekyll serve
 <small markdown="1">Server ist unter <http://127.0.0.1:4000> aufrufbar</small>
 
 Einmaliger Refresh
+
 ```sh
 bundle exec jekyll build
 ```
@@ -312,6 +307,9 @@ bundle update
 
 - GitHub
 - Trello
+- One Note, Evernote, Email, ...
+- Alles, was Text speichern kann :-)
+- ...
 
 ---
 
@@ -375,8 +373,9 @@ author: [ogobrecht, madtsch]
 lang: de
 last_modified_at: 2017-11-12
 ---
-Hier kommt dann der eigentliche Artikel
-...
+
+Hier kommt dann der eigentliche Artikel...
+
 ```
 
 ---
@@ -407,55 +406,33 @@ Hier kommt dann der eigentliche Artikel
 ├── .jekyll-metadata
 └── index.html # can also be an 'index.md' with valid YAML Frontmatter
 ```
+
 [Jekyll Doku: Directory structure](https://jekyllrb.com/docs/structure/)
 
-
 ---
 
-### Posts & Pages verlinken 1
+### Posts & Pages verlinken - erster Blick auf Liquid
 
-URLs Mit Liquid Includes (gleich mehr dazu)
-
-```
-{{ site.baseurl }}{% link _collection/name-of-document.md %}
-{{ site.baseurl }}{% link _posts/2016-07-26-name-of-post.md %}
-{{ site.baseurl }}{% link news/index.html %}
-{{ site.baseurl }}{% link /assets/files/doc.pdf %}
-```
+Markdown Link Syntax & Liquid Tag "link"  
 <small markdown="1">`{{ site.baseurl }}` ist je nach Konfiguration optional</small>
-
-[Jekyll Doku: Links](https://jekyllrb.com/docs/templates/#links)
-
----
-
-### Posts & Pages verlinken 2
-
-Mit Markdown Link Syntax & Include
 
 ```md
-[Link to a document]({% link _collection/name-of-document.md %})
 [Link to a post]({% link _posts/2016-07-26-name-of-post.md %})
 [Link to a page]({{ site.baseurl }}{% link news/index.html %})
-[Link to a file]({{ site.baseurl }}{% link /assets/doc.pdf %})
+[Link to a file]({% link /assets/doc.pdf %})
 ```
-<small markdown="1">`{{ site.baseurl }}` ist je nach Konfiguration optional</small>
-
----
-
-### Posts & Pages verlinken 3
 
 Nur mit Markdown...
 
 ```md
 [Link to a post](/posts/2016-07-26-name-of-post.html)
 [Link to a page]({{ site.baseurl }}/news/index.html)
-[Link to a file]({{ site.baseurl }}/assets/doc.pdf)
+[Link to a file](/assets/doc.pdf)
 ```
-<small markdown="1">`{{ site.baseurl }}` ist je nach Konfiguration optional</small>
 
-Wo ist der Unterschied?
+Wo ist der Unterschied?  
+<small>"link" Tag sorgt für korrekte Permalinks! [Jekyll Doku: Links](https://jekyllrb.com/docs/templates/#links)</small>
 
-Das link Include sorgt für korrekte Permalinks!
 
 ---
 
@@ -471,7 +448,7 @@ Das link Include sorgt für korrekte Permalinks!
 
 Beispiel: [Reveal.js](http://lab.hakim.se/reveal-js/) Integration
 
-Was uns hilft: Jekylls Übersichtlichkeit und Anpassbarkeit
+<small>Was uns hilft: Jekylls Übersichtlichkeit und Anpassbarkeit</small>
 
 ---
 
@@ -479,9 +456,9 @@ Was uns hilft: Jekylls Übersichtlichkeit und Anpassbarkeit
 
 Jekylls Template Engine
 
-- Layouts
-- Includes
-- [Jekyll Templates](https://jekyllrb.com/docs/templates/) (Liquid)
+- Layouts (kaskadierende Templates)
+- Includes (Funktionsaufrufe)
+- [Jekyll Doku: Templates](https://jekyllrb.com/docs/templates/)
 - [Liquid Template Language](https://shopify.github.io/liquid/)
 
 ---
@@ -503,7 +480,7 @@ Jekylls Template Engine
 
 - Layout für Reveal.js
 - Include zur Einbindung in Posts
-- Eine Markdowndatei für Slides
+- Eine Markdowndatei für Folieninhalte
 - Die Reveal.js Library Files
 
 ---
@@ -512,8 +489,8 @@ Jekylls Template Engine
 
 - Ein Ordner pro Präsentation
 - `index.md` für Reveal.js
-- `slides.md` für Slides (ohne Front Matter)
-- Reveal Libs in `/assets`
+- `slides.md` für Folieninhalte (ohne Front Matter)
+- Reveal Libs in `/assets/reveal.js`
 - Include mit Variable `path`
 
 ---
