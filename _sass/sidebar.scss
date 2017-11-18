@@ -1,32 +1,35 @@
 // Define defaults for each variable.
 
 // Font settings
-$base-font-family:      "-apple-system", BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-weight:      400 !default;
-$base-font-size:        18px !default;
-$small-font-size:       15px !default;
-$extra-small-font-size: 12px !default;
-$large-line-height:     1.8 !default;
-$base-line-height:      1.5 !default;
-$small-line-height:     1.2 !default;
-$text-color:            #333 !default;
-$background-color:      #fdfdfd !default;
+$base-font-family:       "-apple-system", BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-weight:       400 !default;
+$base-font-size:         18px !default;
+$small-font-size:        15px !default;
+$extra-small-font-size:  12px !default;
+$large-line-height:      1.8 !default;
+$base-line-height:       1.5 !default;
+$small-line-height:      1.2 !default;
+
+// Text decoration for links
+$link-text-decoration:   "none" !default;
 
 // Color settings - Git Hub blue: #2b7bb9, Reveal.js theme solarized blue: #268bd2
-$brand-color:           #268bd2 !default;
-$brand-color-light:     lighten($brand-color, 40%) !default;
-$brand-color-dark:      darken($brand-color, 25%) !default;
-$grey-color:            #828282 !default;
-$grey-color-light:      lighten($grey-color, 40%) !default;
-$grey-color-dark:       darken($grey-color, 25%) !default;
+$text-color:             #333 !default;
+$background-color:       #fdfdfd !default;
+$brand-color:            #268bd2 !default;
+$brand-color-light:      lighten($brand-color, 40%) !default;
+$brand-color-dark:       darken($brand-color, 25%) !default;
+$grey-color:             #828282 !default;
+$grey-color-light:       lighten($grey-color, 40%) !default;
+$grey-color-dark:        darken($grey-color, 25%) !default;
 
 // Layout settings
-$spacing-unit:          30px !default;
-$content-max-width:     750px !default;
-$nav-button-max-width:  799px !default;
-$logo-height:           80px !default;
-$box-shadow-img-pre:    0px 1px 4px 0px rgba(0,0,0,0.25) !default;
-$base-border-radius:    3px !default;
+$spacing-unit:           30px !default;
+$content-max-width:      750px !default;
+$nav-button-max-width:   799px !default;
+$logo-height:            80px !default;
+$box-shadow-img-pre:     0px 1px 4px 0px rgba(0,0,0,0.25) !default;
+$base-border-radius:     3px !default;
 
 // Import partials
 @import

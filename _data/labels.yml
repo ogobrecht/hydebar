@@ -1,7 +1,8 @@
 categories:
+  example: Examples
+  general: General
   slides: Slides
-  misc: Miscellaneous
 tags:
   jekyll: Jekyll
-  reveal: Reveal.js
   markdown: Markdown
+  reveal: Reveal.js

@@ -216,7 +216,7 @@ h6 {
 
 a {
     color: $brand-color;
-    text-decoration: none;
+    text-decoration: $link-text-decoration;
     &:hover {
         text-decoration: underline;
     }

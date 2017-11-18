@@ -4,34 +4,35 @@
 @charset "utf-8";
 
 // Font settings
-$base-font-family:      "-apple-system", BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-weight:      400;
-$base-font-size:        18px;
-$small-font-size:       15px;
-$extra-small-font-size: 12px;
-$large-line-height:     1.8;
-$base-line-height:      1.5;
-$small-line-height:     1.2;
+$base-font-family:       "-apple-system", BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-weight:       400;
+$base-font-size:         18px;
+$small-font-size:        15px;
+$extra-small-font-size:  12px;
+$large-line-height:      1.8;
+$base-line-height:       1.5;
+$small-line-height:      1.2;
+
+// Text decoration for links
+$link-text-decoration:   {{ site.styles.link-text-decoration | default: "none" }};
 
 // Color settings
-$text-color:            #333;
-$background-color:      #fdfdfd;
-{% if site.brand-color %}
-$brand-color:           {{ site.brand-color }};
-{% endif %}
-$brand-color-light:     lighten($brand-color, 40%);
-$brand-color-dark:      darken($brand-color, 25%);
-$grey-color:            #828282;
-$grey-color-light:      lighten($grey-color, 40%);
-$grey-color-dark:       darken($grey-color, 25%);
+$text-color:             #333;
+$background-color:       #fdfdfd;
+$brand-color:            {{ site.styles.brand-color | default: "#268bd2" }};
+$brand-color-light:      lighten($brand-color, 40%);
+$brand-color-dark:       darken($brand-color, 25%);
+$grey-color:             #828282;
+$grey-color-light:       lighten($grey-color, 40%);
+$grey-color-dark:        darken($grey-color, 25%);
 
 // Layout settings
-$spacing-unit:          30px;
-$content-max-width:     750px;
-$nav-button-max-width:  799px;
-$logo-height:           80px;
-$box-shadow-img-pre:    0px 1px 4px 0px rgba(0,0,0,0.25);
-$base-border-radius:    3px;
+$spacing-unit:           30px;
+$content-max-width:      750px;
+$nav-button-max-width:   799px;
+$logo-height:            80px;
+$box-shadow-img-pre:     0px 1px 4px 0px rgba(0,0,0,0.25);
+$base-border-radius:     3px;
 
 
 // Import partials from the `_sass` folder

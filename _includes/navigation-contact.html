@@ -1,13 +1,13 @@
 {%- if site.data.authors[site.author].email or site.data.authors[site.author].social_media.size > 0 %}
-      <h3>{% include translation text='contact' %}</h3>
-      <ul>
+<h3>{% include translation text='contact' %}</h3>
+<ul>
   {%- if site.data.authors[site.author].email %}
-        <li><a href="mailto:{{ site.data.authors[site.author].email }}">Email</a></li>
+  <li><a href="mailto:{{ site.data.authors[site.author].email }}">Email</a></li>
   {%- endif -%}
   {%- for item in site.data.authors[site.author].social_media %}
     {%- if item.name and item.url %}
-        <li><a href="{{ item.url }}">{{ item.name | escape }}</a></li>
+  <li><a href="{{ item.url }}">{{ item.name | escape }}</a></li>
     {%- endif %}
   {%- endfor %}
-      </ul>
+</ul>
 {%- endif -%}

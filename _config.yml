@@ -22,9 +22,11 @@ url: "https://ogobrecht.github.io" # The base hostname & protocol for your site,
 baseurl: "/hydebar" # The subpath of your site, e.g. /blog.
 permalink: /posts/:year-:month-:day-:title # Jekyll default is /:categories/:year/:month/:day/:title.html - see also https://jekyllrb.com/docs/permalinks/
 lang: en # The base language of your site, can be overwritten on a page or post - for UI translations see also the files under _data/locales/. If you finished an additional language file please create a pull request to make it availabe for all users :-)
-brand-color: "#268bd2" # If you need more control over the layout please see /assets/main.scss.
 show_lang_in_post_listings: true # Home page, archive, post lists on category and tag pages (useful, when you deliver mixed content).
 feed_limit: 25
+styles: # If you need more control over the layout please see /assets/main.scss and _sass/sidebar
+  brand-color: "#268bd2" # Used for the sidebar and the links
+  link-text-decoration: none # On light brand colors you may want to use underline for the links
 disqus:
   shortname:
 google_analytics:
@@ -99,6 +101,7 @@ kramdown:
 
 # File exclusion
 exclude:
+  - vendor # for Travis CI
   - Gemfile
   - Gemfile.lock
   - Rakefile
