@@ -16,6 +16,7 @@
  */
 
 .nav-icon {
+    display: block;
     position: relative;
     height: .3125em;
     width: 2.5em;
@@ -83,61 +84,4 @@
     height: 100%;
     background: hsla(0, 0%, 0%, 0.5);
     z-index: 1;
-}
-
-@media only screen and (min-width: 320px) and (max-width: $nav-button-max-width) {
-    body {
-        overflow-x: hidden;
-    }
-    .nav-button {
-        display: inline-block;
-        position: fixed;
-        top: 1.5em;
-        right: 0;
-        z-index: 2;
-    }
-    .sidebar {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: -250px;
-        z-index: 3;
-        transition: left 0.2s;
-    }
-    .page-content {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 319px) {
-    body {
-        overflow-x: hidden;
-    }
-    .nav-button {
-        display: none;
-    }
-    .sidebar {
-        position: inherit;
-        width: 100%;
-        height: auto;
-        float: none;
-    }
-    .site-nav {
-        padding: $spacing-unit $spacing-unit/2;
-    }
-    .page-content {
-        float: none;
-        width: 100%;
-        padding: $spacing-unit/2;
-    }
-}
-
-@media only print {
-    .sidebar {
-        display: none;
-    }
-    .page-content {
-        float: none;
-        width: 100%;
-    }
 }

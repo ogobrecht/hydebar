@@ -20,10 +20,10 @@
 <body>
 
   <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-  <label for="nav-trigger" class="nav-button"><div class="nav-icon"></div></label>
+  <label for="nav-trigger" class="nav-button"><span class="nav-icon"></span></label>
   <label for="nav-trigger" class="overlay"></label>
 
-  <main class="page-content" aria-label="Content" role="main">
+  <main class="page-content" aria-label="Content">
     <div class="wrapper">
 
 {{ content }}
@@ -32,9 +32,9 @@
   </main>
 
   <div class="sidebar">
-    <header class="site-header" role="banner">
+    <header class="site-header">
       <a class="site-title" href="{{ '/' | relative_url }}">
-        <h1>{{ site.title | smartify }}</h1>
+        <h2>{{ site.title | smartify }}</h2>
         <p class="meta">{{ site.description | smartify }}</p>
       </a>
     </header>

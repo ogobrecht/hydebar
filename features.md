@@ -201,7 +201,7 @@ To check, if you don't have forgotten to create a category or tag page you can u
 
 Because of the fact we support multiple authors and subtitles the default feed from Jekyll was not ok. We wanted also to customize the number of posts included in the feed. You can configure this limit in the `_config.yml`.
 
-If you want to customize the feed feel free to edit the file `_layouts/feed.xml`. Please keep in mind, that the reference to your feed in the `_layouts/default.html` 
+If you want to customize the feed feel free to edit the file `_layouts/feed.xml`. Please keep in mind, that the reference to your feed in the `_layouts/default.html`
 
 
 ## robots.txt, sitemap.xml
@@ -282,3 +282,9 @@ If you want to be more semantic correct then use real figures and the possibilit
 
 ## Disqus comments
 ## Google analytics
+## W3C compliant
+
+The resulting site was checked again these compliance tests - you can check it again with the provided links:
+
+- [Atom 1.0 feed](https://validator.w3.org/feed/check.cgi?url=https%3A//ogobrecht.github.io/hydebar/feed.xml)
+- 
