@@ -5,7 +5,7 @@
     .nav-button {
         display: inline-block;
         position: fixed;
-        top: 1.5em;
+        top: $spacing-unit;
         right: 0;
         z-index: 2;
     }
@@ -22,6 +22,16 @@
     }
 }
 
+@media only screen and (max-width: 419px) {
+    .page-content {
+        padding: $spacing-unit/2;
+    }
+    .nav-button {
+        top: $spacing-unit/2;
+        padding-right: $spacing-unit/2;
+    }
+}
+
 @media only screen and (max-width: 319px) {
     body {
         overflow-x: hidden;
@@ -34,11 +44,16 @@
         width: 100%;
         height: auto;
         float: none;
-        padding: $spacing-unit/2;
     }
     .page-content {
         float: none;
         width: 100%;
+        padding: $spacing-unit/2;
+    }
+}
+
+@media only screen and (max-width: 249px) {
+    .sidebar {
         padding: $spacing-unit/2;
     }
 }

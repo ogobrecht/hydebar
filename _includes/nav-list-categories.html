@@ -1,8 +1,7 @@
 {%- if site.categories.size > 0 %}
-{%- if include.noheader %}
-{%- else %}
+  {%- if include.header %}
 <h3>{% include translation text='categories' %}</h3>
-{%- endif %}
+  {%- endif %}
 <ul>
   {%- capture categories %}
   {%- for item in site.categories %}

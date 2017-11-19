@@ -1,6 +1,6 @@
 ---
-title: Site Categories
-layout: page
+title: Category Index
+layout: index
 ---
 
-{% include navigation-categories.html noheader=true %}
+{% include nav-list-categories.html %}

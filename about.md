@@ -1,6 +1,6 @@
 ---
 title: About
-sidebar: 5
+sidebar: 6
 ---
 
 ## Me

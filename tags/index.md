@@ -1,6 +1,6 @@
 ---
-title: Site Tags
-layout: page
+title: Tag Index
+layout: index
 ---
 
-{% include navigation-tags.html noheader=true %}
+{% include nav-list-tags.html %}

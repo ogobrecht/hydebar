@@ -19,17 +19,19 @@
 
 <body>
 
-  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-  <label for="nav-trigger" class="nav-button"><span class="nav-icon"></span></label>
-  <label for="nav-trigger" class="overlay"></label>
-
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
 
+<!--content-begin-->
 {{ content }}
+<!--content-end-->
 
     </div>
   </main>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="nav-button"><span class="nav-icon"></span></label>
+  <label for="nav-trigger" class="overlay"></label>
 
   <div class="sidebar">
     <header class="site-header">
@@ -39,12 +41,16 @@
       </a>
     </header>
     <nav class="site-nav">
-{%- if site.sidebar.pages %}{% include navigation-pages-main.html %}{% endif %}
-{%- if site.sidebar.categories %}{% include navigation-categories.html %}{% endif %}
-{%- if site.sidebar.tags %}{% include navigation-tags.html %}{% endif %}
-{%- if site.sidebar.contact %}{% include navigation-contact.html %}{% endif %}
-{%- if site.sidebar.legal %}{% include navigation-pages-legal.html %}{% endif %}
-      <a class="meta" href="https://github.com/ogobrecht/hydebar">Powered by Jekyll & HydeBar</a>
+
+<!--navigation-content-begin-->
+{%- if site.sidebar.pages %}{% include nav-list-pages-main.html %}{% endif %}
+{%- if site.sidebar.categories %}{% include nav-list-categories.html header=true %}{% endif %}
+{%- if site.sidebar.tags %}{% include nav-list-tags.html header=true %}{% endif %}
+{%- if site.sidebar.contact %}{% include nav-list-contact.html header=true %}{% endif %}
+{%- if site.sidebar.legal %}{% include nav-list-pages-legal.html header=true %}{% endif %}
+<a class="meta" href="https://github.com/ogobrecht/hydebar">Powered by Jekyll & HydeBar</a>
+<!--navigation-content-end-->
+
     </nav>
   </div>
 

@@ -8,7 +8,15 @@
 <ul class="post-list-archive">
     {%- assign date = currentdate -%}
   {%- endif %}
-<li><a href="{{ post.url | relative_url}}">{{ post.title }}</a>{% if site.show_lang_in_post_listings == true %} <span class="post-meta">({{post.lang}})</span>{% endif %}{% if post.subtitle %}<br><span class="post-meta">{{ post.subtitle }}</span>{% endif %}</li>
+<li>
+  <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
+  {%- if site.show_lang_in_post_listings == true %}
+  <span class="post-meta">({{post.lang}})</span>
+  {%- endif %}
+  {%- if post.subtitle %}
+  <br><span class="post-meta">{{ post.subtitle }}</span>
+  {%- endif %}
+</li>
   {%- if forloop.last %}
 </ul>
   {%- endif %}

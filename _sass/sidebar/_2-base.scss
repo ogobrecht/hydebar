@@ -58,8 +58,9 @@ ol,
 dl,
 figure,
 .figure,
+table,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit/2;
 }
 
 
@@ -95,46 +96,52 @@ img {
         margin: 0.3em 1em 0 0;
         box-shadow: none;
     }
-    &.w30 {
+    &.width20 {
+        width: 20%;
+    }
+    &.width25 {
+        width: 25%;
+    }
+    &.width30 {
         width: 30%;
     }
-    &.w35 {
+    &.width35 {
         width: 35%;
     }
-    &.w40 {
+    &.width40 {
         width: 40%;
     }
-    &.w45 {
+    &.width45 {
         width: 45%;
     }
-    &.w50 {
+    &.width50 {
         width: 50%;
     }
-    &.w55 {
+    &.width55 {
         width: 55%;
     }
-    &.w60 {
+    &.width60 {
         width: 60%;
     }
-    &.w65 {
+    &.width65 {
         width: 65%;
     }
-    &.w70 {
+    &.width70 {
         width: 70%;
     }
-    &.w75 {
+    &.width75 {
         width: 75%;
     }
-    &.w80 {
+    &.width80 {
         width: 80%;
     }
-    &.w85 {
+    &.width85 {
         width: 85%;
     }
-    &.w90 {
+    &.width90 {
         width: 90%;
     }
-    &.w95 {
+    &.width95 {
         width: 95%;
     }
 }
@@ -296,4 +303,39 @@ hr {
 
 p {
     line-height: $large-line-height;
+}
+
+
+/**
+ * Tables
+ */
+
+table {
+    width: 100%;
+    font-size: $small-font-size;
+    text-align: $table-text-align;
+    color: lighten($text-color, 18%);
+    border-collapse: collapse;
+    border: 1px solid $grey-color-light;
+    tr {
+        &:nth-child(even) {
+            background-color: lighten($grey-color-light, 6%);
+        }
+    }
+    th,
+    td {
+        padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    }
+    th {
+        background-color: lighten($grey-color-light, 3%);
+        border: 1px solid darken($grey-color-light, 4%);
+        border-bottom-color: darken($grey-color-light, 12%);
+    }
+    td {
+        border: 1px solid $grey-color-light;
+    }
+    /* Don't use a margin on code samples within tables */
+    pre {
+        margin-bottom: 0;
+    }
 }

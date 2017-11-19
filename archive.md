@@ -1,6 +1,6 @@
 ---
 title: Post Archive
-sidebar: 4
+sidebar: 5
 sidebar-title: Archive
 ---
 

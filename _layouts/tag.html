@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-<!--content-begin-->
-
 {%- assign tag = page.path | remove_first: "tags/" | remove_first: ".md" -%}
 {%- assign count = site.tags[tag] | size %}
 
@@ -15,5 +13,3 @@ layout: default
 {%- else -%}
 {%- include post-list-by-tag.html tag=tag -%}
 {%- endif %}
-
-<!--content-end-->

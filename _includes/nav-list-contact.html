@@ -1,9 +1,11 @@
 {%- if site.data.authors[site.author].email or site.data.authors[site.author].social_media.size > 0 %}
+  {%- if include.header %}
 <h3>{% include translation text='contact' %}</h3>
+  {%- endif %}
 <ul>
   {%- if site.data.authors[site.author].email %}
   <li><a href="mailto:{{ site.data.authors[site.author].email }}">Email</a></li>
-  {%- endif -%}
+  {%- endif %}
   {%- for item in site.data.authors[site.author].social_media %}
     {%- if item.name and item.url %}
   <li><a href="{{ item.url }}">{{ item.name | escape }}</a></li>

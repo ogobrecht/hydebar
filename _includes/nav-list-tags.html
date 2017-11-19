@@ -1,8 +1,7 @@
 {%- if site.tags.size > 0 %}
-{%- if include.noheader %}
-{%- else %}
+  {%- if include.header %}
 <h3>{% include translation text='tags' %}</h3>
-{%- endif %}
+  {%- endif %}
 <ul>
   {%- capture tags %}
   {%- for item in site.tags %}

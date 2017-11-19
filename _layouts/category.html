@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-<!--content-begin-->
-
 {%- assign category = page.path | remove_first: "categories/" | remove_first: ".md" -%}
 {%- assign count = site.categories[category] | size %}
 
@@ -15,5 +13,3 @@ layout: default
 {%- else -%}
 {%- include post-list-by-category.html category=category -%}
 {%- endif %}
-
-<!--content-end-->

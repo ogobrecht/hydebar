@@ -11,6 +11,7 @@
     padding: $spacing-unit; // $spacing-unit ($spacing-unit + $logo-height) $spacing-unit;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
     background: $brand-color;
     line-height: 1.4em;
     color: #fff;

@@ -4,7 +4,7 @@ sidebar: 1
 sidebar-title: Features
 ---
 
-HydeBar is a fully responsive HTML5 Jekyll sidebar template for the static site generator Jekyll:
+HydeBar is a fully responsive HTML5 sidebar template for the static site generator Jekyll:
 
 {% include toc header="" %}
 
@@ -28,9 +28,7 @@ After this quick start it is time to look in detail to some more settings:
 
 - `_data/authors`
 - `_config.yml`
-  - Permalink:
-    - `/posts/:year-:month-:day-:title`
-    - [Jekyll Docs: Permalinks](https://jekyllrb.com/docs/permalinks/)
+  - Permalink [Jekyll Docs](https://jekyllrb.com/docs/permalinks/)
   - Your brand color
   - Sidebar settings
   - ...
@@ -194,17 +192,18 @@ The solution is to create for each category or tag an empty file with empty fron
 
 You should use only lowercase slugified keywords for your category and tag pages and also in your posts Front Matter. The labels for your categories are maintained in this file: `_data/labels.yml` - if you forgot to configure a label here then the category or tag name is used as the default in the Navigation and also on each post in the meta section - you will see it...
 
-To check, if you don't have forgotten to create a category or tag page you can use [HTMLProofer](https://jekyllrb.com/docs/continuous-integration/travis-ci/#2-the-test-script). It is always a good idea to check all you links - the link to HTMLProofer is pointing to the Jekyll docs regarding continuous-integration.
+To check, if you have forgotten to create a category or tag page you can use [HTMLProofer](https://jekyllrb.com/docs/continuous-integration/travis-ci/#2-the-test-script). It is always a good idea to check all you links...
 
 
 ## Atom feed
 
-Because of the fact we support multiple authors and subtitles the default feed from Jekyll was not ok. We wanted also to customize the number of posts included in the feed. You can configure this limit in the `_config.yml`.
+Because of the fact we support multiple authors and subtitles the default feed from Jekyll was not enough. We wanted also to customize the number of posts included in the feed. You can configure this limit in the `_config.yml`.
 
-If you want to customize the feed feel free to edit the file `_layouts/feed.xml`. Please keep in mind, that the reference to your feed in the `_layouts/default.html`
-
+If you want to customize the feed feel free to edit the file `_layouts/feed.xml`. If you want to have a different name for your feed, then rename the file `/feed.md` and change in the `_layouts/default.html` the reference to your new feed name.
 
 ## robots.txt, sitemap.xml
+
+
 ## Custom 404 error page which shows the post archive
 ## Support for multiple authors
 ## Support for subtitles
@@ -279,7 +278,7 @@ This is a faked figure caption for an image
 
 If you want to be more semantic correct then use real figures and the possibility to place Markdown inside your figure elements. If you are lazy then use the possibility to add a class to your caption paragraph.
 
-
+## CSS helper classes for images
 ## Disqus comments
 ## Google analytics
 ## W3C valid output - fast and secure
@@ -290,3 +289,18 @@ The links below are **not** working in your local development environment:
 - Google PageSpeed Insights: [check now](https://developers.google.com/speed/pagespeed/insights/?hl=de&url={{ '/' | absolute_url | url_encode }})
 
 And your site is secure by default, it is a static site!
+
+## Credits
+
+This project is built on giants - credits are going to:
+
+- GitHub for [Jekyll](https://jekyllrb.com/), the default [theme minima](https://github.com/jekyll/minima) as the base for my work and the [Atom editor](https://atom.io/) used during the implementation
+- Hakim El Hattab for [Reveal.js](https://github.com/hakimel/reveal.js/)
+- Shopify for [Liquid](https://github.com/Shopify/liquid)
+- W3C for [Unicorn](https://validator.w3.org/unicorn/?ucn_lang=en)
+- All the community members which share their knowledge in blogs, forums and sites like [stackoverflow.com](https://stackoverflow.com/), [developer.mozilla.org](https://developer.mozilla.org)...
+
+Design inspirations for the sidebar - credits are going to:
+
+- Nijiko Yonskai for the [JSDoc theme minami](https://github.com/nijikokun/minami)
+- Shopify for the [Liquid docs page](https://shopify.github.io/liquid/)

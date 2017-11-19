@@ -5,7 +5,7 @@
 .nav-button {
     display: none;
     position: relative;
-    padding: 2.0625em 1.5em;
+    padding: $spacing-unit/3*4 $spacing-unit;
     cursor: pointer;
 }
 
@@ -17,27 +17,27 @@
 .nav-icon {
     display: block;
     position: relative;
-    height: .3125em;
-    width: 2.5em;
-    border-radius: 1em;
+    height: 6px;
+    width: 45px;
+    border-radius: 3px;
     background: hsla(0, 0%, 0%, 0.3);
     transition: 0.5s;
     &:before,
     &:after {
         position: absolute;
-        height: .3125em;
-        width: 2.5em;
-        border-radius: 1em;
+        height: 6px;
+        width: 45px;
+        border-radius: 3px;
         background: hsla(0, 0%, 0%, 0.3);
         transition: 0.5s;
         content: "";
         z-index: -1;
     }
     &:before {
-        top: .625em;
+        top: 12px;
     }
     &:after {
-        top: -.625em;
+        top: -12px;
     }
 }
 
