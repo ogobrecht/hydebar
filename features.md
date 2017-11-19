@@ -282,9 +282,11 @@ If you want to be more semantic correct then use real figures and the possibilit
 
 ## Disqus comments
 ## Google analytics
-## W3C compliant
+## W3C valid output - fast and secure
 
-The resulting site was checked again these compliance tests - you can check it again with the provided links:
+The links below are **not** working in your local development environment:
 
-- [Atom 1.0 feed](https://validator.w3.org/feed/check.cgi?url=https%3A//ogobrecht.github.io/hydebar/feed.xml)
-- 
+- W3C's Unified Validator: [validate now](https://validator.w3.org/unicorn/check?ucn_task=conformance&ucn_uri={{ '/' | absolute_url | url_encode }}&ucn_lang=en)
+- Google PageSpeed Insights: [check now](https://developers.google.com/speed/pagespeed/insights/?hl=de&url={{ '/' | absolute_url | url_encode }})
+
+And your site is secure by default, it is a static site!
