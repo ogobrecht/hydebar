@@ -65,6 +65,20 @@ table,
 
 
 /**
+ * Headings
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $base-font-weight;
+}
+
+
+/**
  * Images
  */
 
@@ -74,76 +88,6 @@ img {
     border: none;
     border-radius: $base-border-radius;
     box-shadow: $box-shadow-img-pre;
-    &.left {
-        float: left;
-        margin: 0.3em 1em 0.3em 0;
-    }
-    &.right {
-        float: right;
-        margin: 0.3em 0 0.3em 1em;
-    }
-    &.avatar {
-        border-radius: $base-border-radius * 2;
-        width: 33%;
-        min-width: 100px;
-        max-width: 200px;
-    }
-    &.circle {
-        border-radius: 50%;
-    }
-    &.author {
-        width: 60px;
-        margin: 0.3em 1em 0 0;
-        box-shadow: none;
-    }
-    &.width20 {
-        width: 20%;
-    }
-    &.width25 {
-        width: 25%;
-    }
-    &.width30 {
-        width: 30%;
-    }
-    &.width35 {
-        width: 35%;
-    }
-    &.width40 {
-        width: 40%;
-    }
-    &.width45 {
-        width: 45%;
-    }
-    &.width50 {
-        width: 50%;
-    }
-    &.width55 {
-        width: 55%;
-    }
-    &.width60 {
-        width: 60%;
-    }
-    &.width65 {
-        width: 65%;
-    }
-    &.width70 {
-        width: 70%;
-    }
-    &.width75 {
-        width: 75%;
-    }
-    &.width80 {
-        width: 80%;
-    }
-    &.width85 {
-        width: 85%;
-    }
-    &.width90 {
-        width: 90%;
-    }
-    &.width95 {
-        width: 95%;
-    }
 }
 
 
@@ -200,20 +144,6 @@ li {
     >ol {
         margin-bottom: 0;
     }
-}
-
-
-/**
- * Headings
- */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: $base-font-weight;
 }
 
 
@@ -294,7 +224,7 @@ pre {
 
 hr {
     display: block;
-    margin: $spacing-unit/2 0;
+    margin: $spacing-unit 0;
     border-top: none;
     border-left: none;
     border-right: none;

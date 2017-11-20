@@ -10,6 +10,7 @@ HydeBar is a fully responsive HTML5 sidebar template for the static site generat
 
 Miss something? Create it, share it...
 
+
 ## Quickstart: Online in 5 minutes
 
 Everything in your browser:
@@ -113,7 +114,7 @@ It is indicated by five dashes
 
 Reveal.js supports horizontal and vertical slides and by pressing the `Esc` key you get a nice overview of all slides. If you organize your slides in horizontal main points and vertical details you are able to navigate fast in your whole presentation when using the overview. For a list of all shortcuts press the `?` in a presentation
 
-The default regular expression forces you to have a blank line before and after the horizontal row to be recognized as a slide separator. Because of that you can have also horizontal rows on a slide - simply omit the blank lines.
+The default regular expression forces you to have a blank line before and after the horizontal row to be recognized as a slide separator.
 
 Markdown allows you to provide so called reference-style links - you put the URL outside of the current text to improve the readability. Reveal seems to slice the presentation into single slides first and then rendering each slide. Because of this you need to have all URLs of reference-style links on the same slide - otherwise your links would not work. No big deal but good to know.
 
@@ -201,14 +202,37 @@ Because of the fact we support multiple authors and subtitles the default feed f
 
 If you want to customize the feed feel free to edit the file `_layouts/feed.xml`. If you want to have a different name for your feed, then rename the file `/feed.md` and change in the `_layouts/default.html` the reference to your new feed name.
 
+
 ## robots.txt, sitemap.xml
+
+FIXME: Add documentation
 
 
 ## Custom 404 error page which shows the post archive
+
+FIXME: Add documentation
+
+
 ## Support for multiple authors
+
+FIXME: Add documentation
+
+
 ## Support for subtitles
+
+FIXME: Add documentation
+
+
 ## UI localization - help needed for more languages
+
+FIXME: Add documentation
+
+
 ## Easy ToC creation: {% raw %}`{% include toc %}`{% endraw %}
+
+FIXME: Add documentation
+
+
 ## Figure captions with a helper CSS class
 
 ***Real figure elements written in raw HTML***
@@ -247,7 +271,7 @@ var example = "dummy string";
 
 ***Faked image and code captions***
 
-With the helper CSS class `.figcaption` or simply `.caption`. We use here the possibility to add attributes to elements - a functionality from the Markdown converter [Kramdown](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions). The resulting paragraph with the class `caption` has a negative `margin-top` and is therefore more aligned to the previous element. Like the real figures it has also a different text color and decoration as the main text:
+With the helper CSS class `.figcaption` or simply `.caption`. We use here the possibility to add attributes to elements - a functionality from the Markdown converter [kramdown](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions). The resulting paragraph with the class `caption` has a negative `margin-top` and is therefore more aligned to the previous element. Like the real figures it has also a different text color and decoration as the main text:
 
 {% raw %}
 ``````md
@@ -255,32 +279,45 @@ With the helper CSS class `.figcaption` or simply `.caption`. We use here the po
 var example = "dummy string";
 ```
 
-{:.caption}
 Faked figure caption for a code snippet
+{:.caption}
 
 ![Page Speed]({{site.baseurl}}/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/page-speed-statisch-desktop.png)
 
-{:.caption}
 Faked figure caption for an image
+{:.caption}
 ``````
 {% endraw %}
 
 
-{:.caption}
 This is a faked figure caption for a code snippet
+{:.caption}
 
 ![Page Speed]({{site.baseurl}}/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/page-speed-statisch-mobil.png)
 
-{:.caption}
 This is a faked figure caption for an image
+{:.caption}
 
 ***Conclusion***
 
 If you want to be more semantic correct then use real figures and the possibility to place Markdown inside your figure elements. If you are lazy then use the possibility to add a class to your caption paragraph.
 
+
 ## CSS helper classes for images
+
+FIXME: Add documentation
+
+
 ## Disqus comments
+
+FIXME: Add documentation
+
+
 ## Google analytics
+
+FIXME: Add documentation
+
+
 ## W3C valid output - fast and secure
 
 The links below are **not** working in your local development environment:
@@ -289,18 +326,3 @@ The links below are **not** working in your local development environment:
 - Google PageSpeed Insights: [check now](https://developers.google.com/speed/pagespeed/insights/?hl=de&url={{ '/' | absolute_url | url_encode }})
 
 And your site is secure by default, it is a static site!
-
-## Credits
-
-This project is built on giants - credits are going to:
-
-- GitHub for [Jekyll](https://jekyllrb.com/), the default [theme minima](https://github.com/jekyll/minima) as the base for my work and the [Atom editor](https://atom.io/) used during the implementation
-- Hakim El Hattab for [Reveal.js](https://github.com/hakimel/reveal.js/)
-- Shopify for [Liquid](https://github.com/Shopify/liquid)
-- W3C for [Unicorn](https://validator.w3.org/unicorn/?ucn_lang=en)
-- All the community members which share their knowledge in blogs, forums and sites like [stackoverflow.com](https://stackoverflow.com/), [developer.mozilla.org](https://developer.mozilla.org)...
-
-Design inspirations for the sidebar - credits are going to:
-
-- Nijiko Yonskai for the [JSDoc theme minami](https://github.com/nijikokun/minami)
-- Shopify for the [Liquid docs page](https://shopify.github.io/liquid/)

@@ -14,4 +14,4 @@ This project is built on the shoulders of giants - credits are going to:
 Design inspirations for the sidebar - credits are going to:
 
 - Nijiko Yonskai for the [JSDoc theme minami](https://github.com/nijikokun/minami)
-- Shopify for the [Liquid docs page](https://shopify.github.io/liquid/)
+- Shopify for the [Liquid docs site](https://shopify.github.io/liquid/)

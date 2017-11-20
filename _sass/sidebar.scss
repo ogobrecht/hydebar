@@ -28,7 +28,8 @@ $spacing-unit:           30px !default;
 $content-max-width:      750px !default;
 $nav-button-max-width:   799px !default;
 $logo-height:            80px !default;
-$box-shadow-img-pre:     0px 1px 4px 0px rgba(0,0,0,0.25) !default;
+$box-shadow:             0px 1px 4px 0px rgba(0,0,0,0.25) !default;
+$box-shadow-img-pre:     $box-shadow !default;
 $base-border-radius:     3px !default;
 $table-text-align:       left !default;
 
@@ -36,9 +37,10 @@ $table-text-align:       left !default;
 @import
   "sidebar/1-normalize",
   "sidebar/2-base",
-  "sidebar/3-syntax-highlighting",
-  "sidebar/4-layout-sidebar",
-  "sidebar/5-layout-content",
-  "sidebar/6-layout-nav-icon",
-  "sidebar/7-media-queries"
+  "sidebar/3-helper-classes",
+  "sidebar/4-syntax-highlighting",
+  "sidebar/5-layout-sidebar",
+  "sidebar/6-layout-content",
+  "sidebar/7-layout-nav-icon",
+  "sidebar/8-media-queries"
 ;
