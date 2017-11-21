@@ -9,16 +9,17 @@ Please use for all comments, bug reports and feature requests the [issues functi
 Keep in mind that the focus of this project is to deliver a solid, customizable foundation without any hidden blackbox except Jekyll itself. Feature requests out of the focus of a normal user/blogger probably would not implemented/merged.
 
 
-### 0.3.0 (2017-xx-xx) still in development
+### 0.3.0 (2017-xx-xx)
 
-Todos:
+Ready for use, some small todos are open:
 
-- Better table styles: see drafts
-- Better definition list styles
-- Hide scrollbar on all browsers:
+- Add missing docs on features page
+- Hide scrollbar of sidebar in all browsers:
   - [link1](https://stackoverflow.com/questions/3296644/hiding-the-scrollbar-on-an-html-page),
   - [link2](https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll)
-- ...
+- ~~Better definition list styles~~
+- ~~Better table styles~~
+- ...?
 
 
 ### 0.2.0 (2017-08-19) not published

@@ -59,6 +59,7 @@ dl,
 figure,
 .figure,
 table,
+hr,
 %vertical-rhythm {
     margin-bottom: $spacing-unit/2;
 }
@@ -146,6 +147,15 @@ li {
     }
 }
 
+dt {
+    font-style: italic;
+    font-weight: 600;
+}
+
+dd {
+    padding: 0 $spacing-unit/2;
+}
+
 
 /**
  * Links
@@ -224,7 +234,6 @@ pre {
 
 hr {
     display: block;
-    margin: $spacing-unit 0;
     border-top: none;
     border-left: none;
     border-right: none;

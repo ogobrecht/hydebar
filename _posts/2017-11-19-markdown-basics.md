@@ -6,209 +6,102 @@ tags: [markdown]
 lang: en
 ---
 
-This is the basic syntax to create posts and pages. Most examples are taken from the [kramdown quick reference](https://kramdown.gettalong.org/quickref.html), the Markdown renderer behind Jekyll. For more details see the [complete kramdown syntax](https://kramdown.gettalong.org/syntax.html).
+Here are some basic syntax to create posts and pages. For the complete Markdown syntax see [John Gruber's original specification](http://daringfireball.net/projects/markdown/) and the [kramdown quick reference](https://kramdown.gettalong.org/quickref.html) - kramdown is the Markdown renderer used by Jekyll and supports some Markdown extensions. For more details see the [complete kramdown syntax](https://kramdown.gettalong.org/syntax.html).
 
-
-## Headers - Setext style
-
-```md
-First level header
-==================
-
-Second level header
--------------------
-```
-
-***RESULT:***
-
-First level header
-==================
-
-Second level header
--------------------
-
----
-
-## Headers - atx style
-
-```md
-# H1 Header
-
-## H2 Header
-
-### H3 Header
-
-#### H4 Header
-
-##### H5 Header
-
-###### H6 Header
-```
-
-***RESULT:***
-
-# H1 Header
-
-## H2 Header
-
-### H3 Header
-
-#### H4 Header
-
-##### H5 Header
-
-###### H6 Header
-
----
-
-## Blockquotes
-
-```md
-> A sample blockquote.
->
-> >Nested blockquotes are
-> >also possible.
->
-> ## Headers work too
-> This is the outer quote again.
-
-> This is a blockquote
-continued on this
-and this line.
-
-But this is a separate paragraph.
-```
-
-***RESULT:***
-
-> A sample blockquote.
->
-> >Nested blockquotes are
-> >also possible.
->
-> ## Headers work too
-> This is the outer quote again.
-
-> This is a blockquote
-continued on this
-and this line.
-
-But this is a separate paragraph.
-
----
-
-## Code Blocks - indent style
-
-Four spaces or one tab to start a code block:
-
-```md
-    This is a sample code block.
-
-    Continued here.
-```
-
-***RESULT:***
-
-    This is a sample code block.
-
-    Continued here.
-
----
-
-## Code Blocks - fenced style
-
-Three or more tildes or backticks, optional language specification:
+Don't use H1 headers in you posts and pages - every HTML page should have only one H1 header - and this H1 header is already occupied by your post or page title. As a best practice use only H2 and H3 headers - everything else is too deep. If you need such deep levels consider to split your post in multiple parts.
 
 ``````md
-~~~~~~
-This is also a code block.
-~~~
-Ending lines must have at least as
-many tildes as the starting line.
-~~~~~~~~~~~~
 
-``` ruby
-def what?
-  42
-end
+## H2 Header
+
+### H3 Header
+
+A paragraph with *emphasized text*, **bold text**, ***emphasized and bold***.
+As an alternative for the star you can use the _underscore_. Text could also be
+marked as ~~strikethrough~~ with two tildes.
+
+* An unordered list item
+  - Could also start with a minus sign
+  + Or a plus sign
+* An inline style link: [Jekyll](https://jekyllrb.com/ "With a title")  
+* A reference style link: [Markdown Syntax][1]
+
+1. An ordered list item
+1. Another one
+  - Unordered sub item
+1. You don't need correct numbers
+1. In the rendered HTML the numbers are correct
+
+> A block quote
+>
+> > Nesting is possible
+>
+> > > Even multiple levels
+>
+> Back to base level
+
+A picture with an optional image title:
+
+![Google PageSpeed]({{site.baseurl}}/assets/google-page-speed-insights-mobile.png "Image title")
+
+Some source code:
+```js
+var example = "dummy JavaScript code";
 ```
+
+A horizontal row:
+
+---
+
+[1]: https://daringfireball.net/projects/markdown/syntax
+
 ``````
 
-***RESULT:***
+***Result:***
 
-~~~~~~
-This is also a code block.
-~~~
-Ending lines must have at least as
-many tildes as the starting line.
-~~~~~~~~~~~~
+## H2 Header
 
-``` ruby
-def what?
-  42
-end
+### H3 Header
+
+A paragraph with *emphasized text*, **bold text**, ***emphasized and bold***.
+As an alternative for the star you can use the _underscore_. Text could also be
+marked as ~~strikethrough~~ with two tildes.
+
+* An unordered list item
+  - Could also start with a minus sign
+  + Or a plus sign
+* An inline style link: [Jekyll](https://jekyllrb.com/ "With a title")  
+* A reference style link: [Markdown Syntax][1]
+
+1. An ordered list item
+1. Another one
+  - Unordered sub item
+1. You don't need correct numbers
+1. In the rendered HTML the numbers are correct
+
+> A block quote
+>
+> > Nesting is possible
+>
+> > > Even multiple levels
+>
+> Back to base level
+
+A picture with an optional image title:
+
+![Google PageSpeed]({{site.baseurl}}/assets/google-page-speed-insights-mobile.png "Image title")
+
+Some source code:
+```js
+var example = "dummy JavaScript code";
 ```
 
----
-
-## Horizontal Rules
-
-Three or more asterisks, dashes or underscores, optionally separated by spaces or tabs:
-
-```md
-* * *
+A horizontal row:
 
 ---
 
-  _  _  _  _
+[1]: https://daringfireball.net/projects/markdown/syntax
 
----------------
-```
+Still reading? Congratulations: You know now the syntax for 80 percent of the normal content creation. Feels natural or what do you think?
 
-***RESULT:***
-
-* * *
-
----
-
-  _  _  _  _
-
----------------
-
-***END RESULT*** ;-)
-
----
-
-## Lists
-
-```md
-1. This is a list item
-1. And another item
-1. And the third one
-   with additional text
-
-* A list item
-with additional text
-
-1.  This is a list item
-
-    > with a blockquote
-
-    # And a header
-
-2.  Followed by another item
-
-1. Item one
-   1. sub item one
-   2. sub item two
-   3. sub item three
-2. Item two
-
-This is a paragraph.
-1. This is NOT a list.
-
-1. This is a list!
-
-* Item one
-+ Item two
-- Item three
+Happy writing ;-)

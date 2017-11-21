@@ -37,6 +37,36 @@ Nicht als extra Teil ansehen
 
 -----
 
+## Was ist git?
+
+- Open Source Software zur Versionsverwaltung
+- Initiator 2005 - Linus Torvalds
+
+---
+
+### Benutzbar in der Kommandozeile ...
+
+![git in der Kommandozeile](./assets/git.png)  
+
+---
+
+### ... oder mit grafischen Tools
+
+![GitHubDesktop](./assets/githubdesktop.png)  
+
+wie GitHubDesktop oder Editoren wie Atom
+
+-----
+
+## Was ist GitHub?
+
+- Webbasierter Online Dienst
+- Reichert Entwicklungsprozess an
+- Öffentliche Repositories/Projekte kostenfrei
+- Kostenfreie Subdomain - UserName.github.io
+
+-----
+
 ## Was ist Jekyll?
 
 ---
@@ -183,8 +213,8 @@ Markdown = Schreib-Format
 - Fork repository [HydeBar](https://github.com/ogobrecht/hydebar)
 - Edit `_config.yml` (url, baseurl)
 - Change repository settings
-    - Rename to yourUserName.github.io
-    - Activate GitHub Pages
+  - Rename to yourUserName.github.io
+  - Activate GitHub Pages
 
 ---
 
