@@ -14,7 +14,7 @@ Keep in mind that the focus of this project is to deliver a solid, customizable 
 Ready for use, some small todos are open:
 
 - Add missing docs on features page
-- Hide scrollbar of sidebar in all browsers:
+- ~~Hide scrollbar of sidebar in all browsers~~:
   - [link1](https://stackoverflow.com/questions/3296644/hiding-the-scrollbar-on-an-html-page),
   - [link2](https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll)
 - ~~Better definition list styles~~

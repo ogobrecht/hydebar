@@ -34,13 +34,14 @@
   <label for="nav-trigger" class="overlay"></label>
 
   <div class="sidebar">
-    <header class="site-header">
-      <a class="site-title" href="{{ '/' | relative_url }}">
-        <h2>{{ site.title | smartify }}</h2>
-        <p class="meta">{{ site.description | smartify }}</p>
-      </a>
-    </header>
-    <nav class="site-nav">
+    <div class="wrapper">
+      <header class="site-header">
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          <h2>{{ site.title | smartify }}</h2>
+          <p class="meta">{{ site.description | smartify }}</p>
+        </a>
+      </header>
+      <nav class="site-nav">
 
 <!--navigation-content-begin-->
 {%- if site.sidebar.pages %}{% include nav-list-pages-main.html %}{% endif %}
@@ -51,7 +52,8 @@
 <a class="meta" href="https://github.com/ogobrecht/hydebar">Powered by Jekyll & HydeBar</a>
 <!--navigation-content-end-->
 
-    </nav>
+      </nav>
+    </div>
   </div>
 
 {% if jekyll.environment == 'production' and site.google_analytics %}{% include google-analytics.html %}{% endif %}
