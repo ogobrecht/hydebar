@@ -205,7 +205,10 @@ If you want to customize the feed feel free to edit the file `_layouts/feed.xml`
 
 ## robots.txt, sitemap.xml
 
-FIXME: Add documentation
+The layout and content for these two files are taken from here:
+
+- [robotstxt.org](http://www.robotstxt.org/robotstxt.html)
+- [Google webmaster help](www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449)
 
 
 ## Custom 404 error page which shows the post archive
@@ -251,7 +254,7 @@ var example = "dummy string";
 
 <figure markdown="0">
 <img
-  src="{{site.baseurl}}/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/page-speed-statisch-desktop.png"
+  src="{{site.baseurl}}/assets/images/page-speed-desktop.png"
   alt="Page Speed" />
 <figcaption>A real figure caption for an image</figcaption>
 </figure>
@@ -263,7 +266,7 @@ var example = "dummy string";
 
 <figure markdown="0">
 <img
-  src="{{site.baseurl}}/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/page-speed-statisch-desktop.png"
+  src="{{site.baseurl}}/assets/images/page-speed-desktop.png"
   alt="Page Speed" />
 <figcaption>This is a real figure caption for an image</figcaption>
 </figure>
@@ -282,7 +285,7 @@ var example = "dummy string";
 Faked figure caption for a code snippet
 {:.caption}
 
-![Page Speed]({{site.baseurl}}/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/page-speed-statisch-desktop.png)
+![Page Speed]({{site.baseurl}}/assets/images/page-speed-mobile.png)
 
 Faked figure caption for an image
 {:.caption}
@@ -293,7 +296,7 @@ Faked figure caption for an image
 This is a faked figure caption for a code snippet
 {:.caption}
 
-![Page Speed]({{site.baseurl}}/slides/2017-11-22-dr-jekyll-and-mr-markdown-bloggen-fuer-entwickler/assets/page-speed-statisch-mobil.png)
+![Page Speed]({{site.baseurl}}/assets/images/page-speed-mobile.png)
 
 This is a faked figure caption for an image
 {:.caption}

@@ -17,6 +17,7 @@
         text-decoration: none;
     }
     .wrapper {
+        overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         max-height: 100%;
