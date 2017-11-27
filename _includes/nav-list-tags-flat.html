@@ -1,0 +1,13 @@
+{%- capture tags %}
+{%- for item in site.tags %}
+  {{ item[0] }}#{{ item[1].size }}
+{%- endfor %}
+{%- endcapture %}
+{%- assign sortedtags = tags | split:' ' | sort %}
+{%- for item in sortedtags %}
+  {%- assign tag_array = item | split: '#' %}
+  {%- assign tag = tag_array[0] %}
+  {%- assign count = tag_array[1] %}
+  {%- assign label = site.data.labels.tags[tag] | default: tag %}
+{%- unless forloop.first %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}<span class="nowrap"><a href="{{ site.baseurl }}/tags/{{ tag }}">{{ label }}</a> ({{ count }})</span>{% if forloop.last %}.{% endif %}
+{%- endfor %}

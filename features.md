@@ -208,7 +208,7 @@ If you want to customize the feed feel free to edit the file `_layouts/feed.xml`
 The layout and content for these two files are taken from here:
 
 - [robotstxt.org](http://www.robotstxt.org/robotstxt.html)
-- [Google webmaster help](www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449)
+- [Google webmaster help](https://support.google.com/webmasters/answer/6062608?hl=en)
 
 
 ## Custom 404 error page which shows the post archive

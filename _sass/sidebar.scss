@@ -3,6 +3,7 @@
 // Font settings
 $base-font-family:       "-apple-system", BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $base-font-weight:       400 !default;
+$site-header-font-size:  26px !default; //align the site header to the available space in the sidebar
 $base-font-size:         18px !default;
 $small-font-size:        15px !default;
 $extra-small-font-size:  12px !default;
@@ -42,5 +43,4 @@ $table-text-align:       left !default;
   "sidebar/5-layout-sidebar",
   "sidebar/6-layout-content",
   "sidebar/7-layout-nav-icon",
-  "sidebar/8-media-queries"
-;
+  "sidebar/8-media-queries";

@@ -298,7 +298,7 @@ Automatischer Refresh bei Änderungen
 bundle exec jekyll serve
 ```
 
-<small markdown="1">Server ist unter <http://127.0.0.1:4000> aufrufbar</small>
+<small markdown="1">Server ist unter <http://localhost:4000> aufrufbar</small>
 
 Einmaliger Refresh
 

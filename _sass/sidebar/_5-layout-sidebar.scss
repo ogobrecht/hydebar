@@ -34,7 +34,7 @@
 .site-header {
     margin-bottom: $spacing-unit/2;
     h2 {
-        font-size: 26px;
+        font-size: $site-header-font-size;
         line-height: $small-line-height;
         margin-bottom: 5px;
     }

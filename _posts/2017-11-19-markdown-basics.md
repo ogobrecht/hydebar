@@ -42,7 +42,7 @@ marked as ~~strikethrough~~ with two tildes.
 
 A picture with an optional image title:
 
-![Google PageSpeed]({{site.baseurl}}/assets/google-page-speed-insights-mobile.png "Image title")
+![Google PageSpeed]({{site.baseurl}}/assets/images/page-speed-mobile.png "Image title")
 
 Some source code:
 ```js
@@ -89,7 +89,7 @@ marked as ~~strikethrough~~ with two tildes.
 
 A picture with an optional image title:
 
-![Google PageSpeed]({{site.baseurl}}/assets/google-page-speed-insights-mobile.png "Image title")
+![Google PageSpeed]({{site.baseurl}}/assets/images/page-speed-mobile.png "Image title")
 
 Some source code:
 ```js

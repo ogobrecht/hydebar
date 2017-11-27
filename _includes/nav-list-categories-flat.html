@@ -1,0 +1,13 @@
+{%- capture categories %}
+{%- for item in site.categories %}
+  {{ item[0] }}#{{ item[1].size }}
+{%- endfor %}
+{%- endcapture %}
+{%- assign sorted_categories = categories | split:' ' | sort %}
+{%- for item in sorted_categories %}
+  {%- assign category_array = item | split: '#' %}
+  {%- assign category = category_array[0] %}
+  {%- assign count = category_array[1] %}
+  {%- assign label = site.data.labels.categories[category] | default: category %}
+{%- unless forloop.first %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}<span class="nowrap"><a href="{{ site.baseurl }}/categories/{{ category }}">{{ label }}</a> ({{ count }})</span>{% if forloop.last %}.{% endif %}
+{%- endfor %}
