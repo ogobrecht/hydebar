@@ -104,4 +104,5 @@ A horizontal row:
 
 Still reading? Congratulations: You know now the syntax for 80 percent of the normal content creation. Feels natural or what do you think?
 
-Happy writing ;-)
+Happy writing ;-)  
+Ottmar

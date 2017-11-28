@@ -5,7 +5,7 @@ categories: [slides]
 tags: [jekyll, markdown]
 author: [ogobrecht, madtsch]
 lang: de
-last_modified_at: 2017-11-12
+last_modified_at: 2017-11-22
 ---
 Die Folien zu unserem Vortrag:
 

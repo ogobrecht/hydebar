@@ -6,27 +6,24 @@ This project uses [semantic versioning](http://semver.org).
 
 Please use for all comments, bug reports and feature requests the [issues functionality on GitHub](https://github.com/ogobrecht/hydebar/issues).
 
-Keep in mind that the focus of this project is to deliver a solid, customizable foundation without any hidden blackbox except Jekyll itself. Feature requests out of the focus of a normal user/blogger probably would not implemented/merged.
+Keep in mind that the focus of this project is to deliver a solid, customizable foundation without any hidden blackbox except Jekyll itself. Feature requests out of the focus of a normal user/blogger would probably not implemented/merged.
 
+### 0.3.0 (2017-11-28)
 
-### 0.3.0 (2017-xx-xx)
-
-Ready for use, some small todos are open:
-
-- Add missing docs on features page
-- ~~Hide scrollbar of sidebar in all browsers~~:
-  - [link1](https://stackoverflow.com/questions/3296644/hiding-the-scrollbar-on-an-html-page),
-  - [link2](https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll)
-- ~~Better definition list styles~~
-- ~~Better table styles~~
-- ...?
+- Corrections for sites in subdirectories
+- Configurable sidebar content
+- Multiple author support
+- Nicer post meta with author image
+- Localizations
+- Reveal.js integration
+- Rename repository to HydeBar :-)
+- Features documentation
 
 
 ### 0.2.0 (2017-08-19) not published
 
 - Rework theme Minima to a sidebar template
 - Used only for my private development blog
-
 
 
 ### 0.1.0 (2017-01-15) not published

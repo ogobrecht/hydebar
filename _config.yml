@@ -35,8 +35,8 @@ google_analytics:
 # Sidebar settings
 sidebar: # Rule for all of the following parameters: If no data is existing, then the menu headers are automatically hidden regardless of the setting. Pages have no heading - they coming direct after the page title.
   pages: true # Pages with frontmatter variable `sidebar` set to a value higher then 0 (order index).
-  categories: true
-  tags: true
+  categories: false
+  tags: false
   contact: true # Email and all social media entries from the site author - see also _data/authors.yml.
   legal: true # Pages with frontmatter variable `sidebar-legal` set to a value higher then 0 (order index).
 

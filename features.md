@@ -56,13 +56,13 @@ Then we have a list of all Categories used in the posts. After that a list of al
 
 The last section is a list of all pages with the Front Matter variable `sidebar-legal` set to a value higher then 0.
 
-All section headers are automatically hidden, when no data is found for the section. You can configure the visibility of each section in the file `_config.yml` - per default all sections are shown:
+All section headers are automatically hidden, when no data is found for the section. You can configure the visibility of each section in the file `_config.yml` - per default are categories and tags hidden (see also the archive page - they are shown there):
 
 ```yaml
 sidebar:
   pages: true
-  categories: true
-  tags: true
+  categories: false
+  tags: false
   contact: true
   legal: true
 ```
@@ -205,35 +205,88 @@ If you want to customize the feed feel free to edit the file `_layouts/feed.xml`
 
 ## robots.txt, sitemap.xml
 
-The layout and content for these two files are taken from here:
-
-- [robotstxt.org](http://www.robotstxt.org/robotstxt.html)
-- [Google webmaster help](https://support.google.com/webmasters/answer/6062608?hl=en)
+The robots.txt file is pointing all robots to the sitemap.xml file, which includes per default all posts and the pages, which are shown on the sidebar.
 
 
 ## Custom 404 error page which shows the post archive
 
-FIXME: Add documentation
+With Github Pages you have the possibility to deliver a custom 404 error page. We use it to show the user a nice error message and all available posts.
 
 
 ## Support for multiple authors
 
-FIXME: Add documentation
+Per default the site owner is the author of all posts. In the `_config.yml` you have only the name of the site author - all the details are defined in `_data/authors.yml`. Here you can configure multiple authors.
+
+If one of your posts has a different or multiple authors simply define a `author` variable in the Front Matter with one or more authors like so:
+
+```md
+---
+title: My fancy blog post
+author: [ogobrecht, madtsch] # you can omit the array brackets for a single author
+---
+```
 
 
 ## Support for subtitles
 
-FIXME: Add documentation
+Short and creative post titles are nice. Unfortunately you need sometimes a small description to clarify what the post is about. Therefore we have the subtitles:
+
+```md
+---
+title: HydeBar
+subtitle: A Jekyll Sidebar Template
+---
+```
+
+The subtitle is shown in all post listings like on the home and archive page. It is also prepended to the post text in the feed.xml.
 
 
 ## UI localization - help needed for more languages
 
-FIXME: Add documentation
+The main reason to have a localization is for displaying dates in the right language format. You can find the language locales in `_data/locales/`. The second reason is dynamic text generation from the includes - the target is to get language specific text out of the includes without code modifications.
+
+Since we have now a localization we use it also on the delivered default pages - here as an example the complete index.md:
+
+```md
+---
+title: Home
+---
+{% include post-list-by-limit.html limit=5 %}
+
+{% include translation text='more_in_the' %} [{% include translation text='archive' %}]({{ site.baseurl }}/archive), {% include translation text='subscribe_via' %} [RSS]({{ site.baseurl }}/feed.xml)
+```
+
+For the start we support English (en) and German (de). We need help for more languages - so, if someone finished the translation for his language please create a pull request or provide the language file via a new issue.
 
 
-## Easy ToC creation: {% raw %}`{% include toc %}`{% endraw %}
+## Easy ToC creation
 
-FIXME: Add documentation
+There are two ways to insert a table of contents. One is to do this with the [documented way of the Markdown renderer kramdown](https://kramdown.gettalong.org/converter/html.html#toc):
+
+```md
+## Table of Contents
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Table of Contents" header
+{:toc}
+```
+
+The other way is to use the provided include:
+
+{% raw %}
+```md
+`{% include toc %}`
+```
+{% endraw %}
+
+With the include you can define your own header instead the localized default one:
+
+{% raw %}
+```md
+`{% include toc header="" %}`
+```
+
+The header is omitted in the output if you provide a empty header variable - we use this here on the features page :-)
 
 
 ## Figure captions with a helper CSS class
@@ -306,19 +359,62 @@ This is a faked figure caption for an image
 If you want to be more semantic correct then use real figures and the possibility to place Markdown inside your figure elements. If you are lazy then use the possibility to add a class to your caption paragraph.
 
 
-## CSS helper classes for images
+## CSS helper classes
 
-FIXME: Add documentation
+There are some CSS helper classes defined which can be useful - here are a text snippet from the about page which uses two of the helper classes:
+
+```md
+![Avatar]({{ site.data.authors[site.author].avatar }}){:.left.avatar} Hi, I am ...
+```
+
+here the corresponding CSS from the file `_sass/sidebar/_3-helper-classes.scss`:
+
+```sass
+.left {
+    float: left;
+    margin: 0.3em 1em 0.3em 0;
+}
+
+.avatar {
+    border-radius: $base-border-radius * 2;
+    width: 33%;
+    min-width: 100px;
+    max-width: 200px;
+}
+```
+
+There are some more - the most interesting ones are probably these:
+
+```css
+/* width from 5%, 10%, 15% up to 100% in 20 steps */
+.width40 { width: 40%; }
+.width75 { width: 75%; }
+
+/* height from 20px, 40px, 60px up to 400px in 20 steps */
+.height120 { width: 120px; }
+.height360 { width: 360px; }
+```
+
+You can use this to easily apply width and height styles to images, figures and other elements.
 
 
 ## Disqus comments
 
-FIXME: Add documentation
+The integration for Disqus comments is the original one from the base theme minima - it is documented [here](https://github.com/jekyll/minima#enabling-comments-via-disqus) - you need only to provide your short name in `_config.yml`:
+
+```yaml
+disqus:
+    shortname: my_disqus_shortname
+```
 
 
-## Google analytics
+## Google Analytics
 
-FIXME: Add documentation
+Like for Disqus the integration of Google Analytics is the original one from the base theme minima - it is documented [here](https://github.com/jekyll/minima#enabling-google-analytics) - you need only to provide your key in `_config.yml`:
+
+```yaml
+google_analytics: UA-NNNNNNNN-N
+```
 
 
 ## W3C valid output - fast and secure
