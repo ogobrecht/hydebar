@@ -9,6 +9,14 @@ Please use for all comments, bug reports and feature requests the [issues functi
 Keep in mind that the focus of this project is to deliver a solid, customizable foundation without any hidden blackbox except Jekyll itself. Feature requests out of the focus of a normal user/blogger would probably not implemented/merged.
 
 
+### 1.0.1 (2017-11-29)
+
+- Fix typos
+- Correct informations
+- Some more details here and there
+- In short: nothing functional
+
+
 ### 1.0.0 (2017-11-28)
 
 - Corrections for sites in subdirectories
