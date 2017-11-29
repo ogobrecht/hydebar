@@ -11,7 +11,7 @@
 <li>
   <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
   {%- if site.show_lang_in_post_listings == true %}
-  <span class="post-meta">({{post.lang}})</span>
+  <span class="post-meta">({{ post.lang| default: site.lang }})</span>
   {%- endif %}
   {%- if post.subtitle %}
   <br><span class="post-meta">{{ post.subtitle }}</span>

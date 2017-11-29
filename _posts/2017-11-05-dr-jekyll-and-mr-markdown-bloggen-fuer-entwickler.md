@@ -18,7 +18,3 @@ _Wenn man sich schon Notizen macht, um das Eine oder Andere zu dokumentieren, wa
 _Der Vortrag führt in die Erstellung eines Blogs mit Jekyll ein und zeigt die einfach nutzbare Template-Engine, mit der man die fertig erhältlichen Themes erweitern kann. Als Beispiel implementieren wir eine integrierte HTML5 Slideshow mit Reveal.js - natürlich ist das dann auch die Technik, mit der der Vortrag gehalten wird :-)_
 
 _Um den Bogen zurück zu Oracle zu schlagen wird zum Abschluss eine ähnlich einfach zu nutzende Template-Engine für PL/SQL gezeigt, mit der man das Eine oder Andere besser lösen kann als mit Replace-Verkettungen._
-
-Weitere Infos zu dem im Vortrag vorgestellten Projekt [HydeBar][1].
-
-[1]: https://github.com/ogobrecht/hydebar

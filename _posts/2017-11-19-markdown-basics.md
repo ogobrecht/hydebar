@@ -3,7 +3,6 @@ title: Markdown Basics
 subtitle: Syntax for creating content
 categories: [general]
 tags: [markdown]
-lang: en
 ---
 
 Here are some basic syntax to create posts and pages. For the complete Markdown syntax see [John Gruber's original specification](http://daringfireball.net/projects/markdown/) and the [kramdown quick reference](https://kramdown.gettalong.org/quickref.html) - kramdown is the Markdown renderer used by Jekyll and supports some Markdown extensions. For more details see the [complete kramdown syntax](https://kramdown.gettalong.org/syntax.html).

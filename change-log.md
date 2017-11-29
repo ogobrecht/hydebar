@@ -9,6 +9,11 @@ Please use for all comments, bug reports and feature requests the [issues functi
 Keep in mind that the focus of this project is to deliver a solid, customizable foundation without any hidden blackbox except Jekyll itself. Feature requests out of the focus of a normal user/blogger would probably not implemented/merged.
 
 
+### 1.0.2 (2017-11-29)
+
+- Fix language default in post list includes
+
+
 ### 1.0.1 (2017-11-29)
 
 - Fix typos

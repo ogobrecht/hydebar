@@ -3,7 +3,6 @@ title: Example Slideshow
 subtitle: A basic example for the Reveal.js integration
 categories: [features]
 tags: [reveal]
-lang: en
 ---
 This post is an example to show you how to integrate an existing slideshow.
 

@@ -1,7 +1,7 @@
 <ul class="post-list">
 {%- for post in site.categories[include.category] %}
 <li>
-  <span class="post-meta">{% include translated-date date=post.date %}{% if site.show_lang_in_post_listings == true %} ({{ post.lang }}){% endif %}</span>
+  <span class="post-meta">{% include translated-date date=post.date %}{% if site.show_lang_in_post_listings == true %} ({{ post.lang | default: site.lang }}){% endif %}</span>
   <h2><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
   {%- if post.subtitle %}
   <span class="post-meta">{{ post.subtitle }}</span>
