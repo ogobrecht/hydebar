@@ -275,7 +275,7 @@ The other way is to use the provided include:
 
 {% raw %}
 ```md
-`{% include toc %}`
+{% include toc %}
 ```
 {% endraw %}
 
@@ -283,13 +283,14 @@ With the include you can define your own header instead the localized default on
 
 {% raw %}
 ```md
-`{% include toc header="" %}`
+{% include toc header="" %}
 ```
+{% endraw %}
 
 The header is omitted in the output if you provide a empty header variable - we use this here on the features page :-)
 
 
-## Figure captions with a helper CSS class
+## Figure captions with a CSS helper class
 
 ***Real figure elements written in raw HTML***
 
@@ -359,9 +360,9 @@ This is a faked figure caption for an image
 If you want to be more semantic correct then use real figures and the possibility to place Markdown inside your figure elements. If you are lazy then use the possibility to add a class to your caption paragraph.
 
 
-## CSS helper classes
+## More CSS helper classes
 
-There are some CSS helper classes defined which can be useful - here are a text snippet from the about page which uses two of the helper classes:
+There are some more CSS helper classes defined which can be useful - here are a text snippet from the about page which uses two of them:
 
 ```md
 ![Avatar]({{ site.data.authors[site.author].avatar }}){:.left.avatar} Hi, I am ...
@@ -369,7 +370,7 @@ There are some CSS helper classes defined which can be useful - here are a text 
 
 here the corresponding CSS from the file `_sass/sidebar/_3-helper-classes.scss`:
 
-```sass
+```css
 .left {
     float: left;
     margin: 0.3em 1em 0.3em 0;
@@ -393,6 +394,10 @@ There are some more - the most interesting ones are probably these:
 /* height from 20px, 40px, 60px up to 400px in 20 steps */
 .height120 { width: 120px; }
 .height360 { width: 360px; }
+
+.shadow { box-shadow: $box-shadow; }
+.noshadow { box-shadow: none; }
+.nowrap { white-space: nowrap; }
 ```
 
 You can use this to easily apply width and height styles to images, figures and other elements.
