@@ -247,14 +247,19 @@ The main reason to have a localization is for displaying dates in the right lang
 
 Since we have now a localization we use it also on the delivered default pages - here as an example the complete index.md:
 
+{% raw %}
 ```md
 ---
 title: Home
 ---
 {% include post-list-by-limit.html limit=5 %}
 
-{% include translation text='more_in_the' %} [{% include translation text='archive' %}]({{ site.baseurl }}/archive), {% include translation text='subscribe_via' %} [RSS]({{ site.baseurl }}/feed.xml)
+{% include translation text='more_in_the' %}
+[{% include translation text='archive' %}]({{site.baseurl}}/archive),
+{% include translation text='subscribe_via' %}
+[RSS]({{site.baseurl}}/feed.xml)
 ```
+{% endraw %}
 
 For the start we support English (en) and German (de). We need help for more languages - so, if someone finished the translation for his language please create a pull request or provide the language file via a new issue.
 
@@ -365,7 +370,9 @@ If you want to be more semantic correct then use real figures and the possibilit
 There are some more CSS helper classes defined which can be useful - here are a text snippet from the about page which uses two of them:
 
 ```md
-![Avatar]({{ site.data.authors[site.author].avatar }}){:.left.avatar} Hi, I am ...
+![Avatar][1]{:.left.avatar} Hi, I am ...
+
+[1]: {{site.data.authors[site.author].avatar}}
 ```
 
 here the corresponding CSS from the file `_sass/sidebar/_3-helper-classes.scss`:
