@@ -9,5 +9,5 @@
   {%- assign category = category_array[0] %}
   {%- assign count = category_array[1] %}
   {%- assign label = site.data.labels.categories[category] | default: category %}
-{%- unless forloop.first %}{% if forloop.last %} {% include translation text='and' %} {% else %}, {% endif %}{% endunless %}<span class="nowrap"><a href="{{ site.baseurl }}/categories/{{ category }}">{{ label }}</a> ({{ count }})</span>{% if forloop.last %}.{% endif %}
+{%- unless forloop.first %}, {% endunless %}<span class="nowrap"><a href="{{ site.baseurl }}/categories/{{ category }}">{{ label }}</a> <span class="post-meta">({{ count }})</span></span>{% if forloop.last %}.{% endif %}
 {%- endfor %}
