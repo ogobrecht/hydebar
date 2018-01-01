@@ -19,7 +19,9 @@ $link-text-decoration:   {{ site.styles.link-text-decoration | default: "none" }
 
 // Color settings
 $text-color:             #333;
-$background-color:       #fdfdfd;
+$background-color:       rgb(253, 253, 253); // should match $nav-icon-box-shadow
+$nav-icon-box-shadow:    0px 0px 3px 3px rgba(253, 253, 253, 0.3); // should match background-color
+$nav-icon-background:    rgba(0, 0, 0, 0.3);
 $brand-color:            {{ site.styles.brand-color | default: "#268bd2" }};
 $brand-color-light:      lighten($brand-color, 40%);
 $brand-color-dark:       darken($brand-color, 25%);

@@ -16,7 +16,9 @@ $link-text-decoration:   none !default;
 
 // Color settings - Git Hub blue: #2b7bb9, Reveal.js theme solarized blue: #268bd2
 $text-color:             #333 !default;
-$background-color:       #fdfdfd !default;
+$background-color:       rgb(253, 253, 253) !default; // should match $nav-icon-box-shadow
+$nav-icon-box-shadow:    0px 0px 3px 3px rgba(253, 253, 253, 0.3) !default; // should match background-color
+$nav-icon-background:    rgba(0, 0, 0, 0.3) !default;
 $brand-color:            #268bd2 !default;
 $brand-color-light:      lighten($brand-color, 40%) !default;
 $brand-color-dark:       darken($brand-color, 25%) !default;
@@ -43,4 +45,5 @@ $table-text-align:       left !default;
   "sidebar/5-layout-sidebar",
   "sidebar/6-layout-content",
   "sidebar/7-layout-nav-icon",
-  "sidebar/8-media-queries";
+  "sidebar/8-media-queries"
+;
